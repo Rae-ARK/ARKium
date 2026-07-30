@@ -77,10 +77,6 @@
 		background: var(--surface);
 	}
 
-	nav h2 {
-		margin: 0;
-		font-size: 1rem;
-	}
 	a {
 		color: var(--text);
 		text-decoration: none;
