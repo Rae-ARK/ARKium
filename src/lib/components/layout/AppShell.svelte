@@ -2,7 +2,7 @@
 	import { settings } from '$lib/stores/settings.svelte';
 	import '$lib/theme/reset.css';
 	import '$lib/theme/theme.css';
-	import TopAppBar from '$lib/components/navigation/TopAppBar.svelte';
+	import TopAppBar from '$lib/components/layout/TopAppBar.svelte';
     import BottomNavigation from '$lib/components/navigation/BottomNavigation.svelte';
 
 	let { children } = $props();
