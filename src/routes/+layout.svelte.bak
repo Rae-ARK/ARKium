@@ -1,9 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	import { resolve } from '$app/paths';
+	import { navigation } from '$lib/config/navigation';
 	import { settings } from '$lib/stores/settings.svelte';
 	import '$lib/theme/reset.css';
 	import '$lib/theme/theme.css';
-	import TopAppBar from '$lib/components/navigation/TopAppBar.svelte';
-    import BottomNavigation from '$lib/components/navigation/BottomNavigation.svelte';
 
 	let { children } = $props();
 
@@ -35,20 +36,57 @@
 	});
 </script>
 
-<TopAppBar />
+<header>
+	<img src="/icon.png" alt="ARKium" />
+	<span>ARKium</span>
+</header>
 
-<main class="content">
+<nav>
+	{#each navigation.main as item (item.path)}
+		<a href={resolve(item.path)} class:active={page.url.pathname === item.path}>
+			{item.label}
+		</a>
+	{/each}
+</nav>
+
+<main>
 	{@render children()}
 </main>
 
-<BottomNavigation />
-
 <style>
-	.content {
-	    padding: 20px;
-	    padding-bottom: 90px;
+	header {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 1rem;
+		background: var(--surface);
+		color: var(--text);
+	}
 
-	    min-height: calc(100vh - 64px);
-    }
+	header img {
+		width: 32px;
+		height: 32px;
+		border-radius: 8px;
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
+		background: var(--surface);
+	}
+
+	a {
+		color: var(--text);
+		text-decoration: none;
+	}
+
+	.active {
+		font-weight: bold;
+	}
+
+	main {
+		padding: 1rem;
+	}
 </style>
-
