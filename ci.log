@@ -1,0 +1,630 @@
+android	Set up job	﻿2026-07-30T19:20:59.5893909Z Current runner version: '2.336.0'
+android	Set up job	2026-07-30T19:20:59.5921114Z ##[group]Runner Image Provisioner
+android	Set up job	2026-07-30T19:20:59.5922197Z Hosted Compute Agent
+android	Set up job	2026-07-30T19:20:59.5922815Z Version: 20260707.563
+android	Set up job	2026-07-30T19:20:59.5923477Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+android	Set up job	2026-07-30T19:20:59.5924241Z Build Date: 2026-07-07T19:33:50Z
+android	Set up job	2026-07-30T19:20:59.5924922Z Worker ID: {b5ecf28c-a291-4633-a9ee-ff2d8b8f0bdf}
+android	Set up job	2026-07-30T19:20:59.5925619Z Azure Region: westcentralus
+android	Set up job	2026-07-30T19:20:59.5926312Z ##[endgroup]
+android	Set up job	2026-07-30T19:20:59.5927834Z ##[group]Operating System
+android	Set up job	2026-07-30T19:20:59.5928596Z Ubuntu
+android	Set up job	2026-07-30T19:20:59.5929078Z 24.04.4
+android	Set up job	2026-07-30T19:20:59.5929612Z LTS
+android	Set up job	2026-07-30T19:20:59.5930157Z ##[endgroup]
+android	Set up job	2026-07-30T19:20:59.5931023Z ##[group]Runner Image
+android	Set up job	2026-07-30T19:20:59.5931700Z Image: ubuntu-24.04
+android	Set up job	2026-07-30T19:20:59.5932275Z Version: 20260720.247.2
+android	Set up job	2026-07-30T19:20:59.5933323Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+android	Set up job	2026-07-30T19:20:59.5935063Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+android	Set up job	2026-07-30T19:20:59.5935986Z ##[endgroup]
+android	Set up job	2026-07-30T19:20:59.5937273Z ##[group]GITHUB_TOKEN Permissions
+android	Set up job	2026-07-30T19:20:59.5939122Z Contents: read
+android	Set up job	2026-07-30T19:20:59.5939842Z Metadata: read
+android	Set up job	2026-07-30T19:20:59.5940823Z Packages: read
+android	Set up job	2026-07-30T19:20:59.5941874Z ##[endgroup]
+android	Set up job	2026-07-30T19:20:59.5944025Z Secret source: Actions
+android	Set up job	2026-07-30T19:20:59.5945217Z Prepare workflow directory
+android	Set up job	2026-07-30T19:20:59.6301038Z Prepare all required actions
+android	Set up job	2026-07-30T19:20:59.6353708Z Getting action download info
+android	Set up job	2026-07-30T19:20:59.9583156Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+android	Set up job	2026-07-30T19:21:00.6106357Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+android	Set up job	2026-07-30T19:21:00.7474097Z Download action repository 'actions/setup-java@v4' (SHA:c1e323688fd81a25caa38c78aa6df2d33d3e20d9)
+android	Set up job	2026-07-30T19:21:01.7498752Z Complete job name: android
+android	Run actions/checkout@v4	﻿2026-07-30T19:21:01.8461543Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8473271Z ##[group]Run actions/checkout@v4
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8474522Z with:
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8475339Z   repository: Rae-ARK/ARKium
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8484930Z   token: ***
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8485752Z   ssh-strict: true
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8486574Z   ssh-user: git
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8487408Z   persist-credentials: true
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8488328Z   clean: true
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8489161Z   sparse-checkout-cone-mode: true
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8490303Z   fetch-depth: 1
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8491127Z   fetch-tags: false
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8491959Z   show-progress: true
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8492803Z   lfs: false
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8493620Z   submodules: false
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8494524Z   set-safe-directory: true
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8495499Z   allow-unsafe-pr-checkout: false
+android	Run actions/checkout@v4	2026-07-30T19:21:01.8496791Z ##[endgroup]
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9541726Z Syncing repository: Rae-ARK/ARKium
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9544439Z ##[group]Getting Git version info
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9545784Z Working directory is '/home/runner/work/ARKium/ARKium'
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9547730Z [command]/usr/bin/git version
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9616667Z git version 2.54.0
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9641286Z ##[endgroup]
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9664634Z Temporarily overriding HOME='/home/runner/work/_temp/052e2c0e-0ae4-4d0a-8bb0-c9e3b7e4efbb' before making global git config changes
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9670461Z Adding repository directory to the temporary git global config as a safe directory
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9674138Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ARKium/ARKium
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9728703Z Deleting the contents of '/home/runner/work/ARKium/ARKium'
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9733476Z ##[group]Initializing the repository
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9738858Z [command]/usr/bin/git init /home/runner/work/ARKium/ARKium
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9830678Z hint: Using 'master' as the name for the initial branch. This default branch name
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9833157Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9836242Z hint: to use in all of your new repositories, which will suppress this warning,
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9838559Z hint: call:
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9839828Z hint:
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9841226Z hint: 	git config --global init.defaultBranch <name>
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9842450Z hint:
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9843567Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9845426Z hint: 'development'. The just-created branch can be renamed via this command:
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9846895Z hint:
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9847675Z hint: 	git branch -m <name>
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9848974Z hint:
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9850977Z hint: Disable this message with "git config set advice.defaultBranchName false"
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9853630Z Initialized empty Git repository in /home/runner/work/ARKium/ARKium/.git/
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9857026Z [command]/usr/bin/git remote add origin https://github.com/Rae-ARK/ARKium
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9940492Z ##[endgroup]
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9943470Z ##[group]Disabling automatic garbage collection
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9945836Z [command]/usr/bin/git config --local gc.auto 0
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9982302Z ##[endgroup]
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9985043Z ##[group]Setting up auth
+android	Run actions/checkout@v4	2026-07-30T19:21:01.9988738Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+android	Run actions/checkout@v4	2026-07-30T19:21:02.0026835Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+android	Run actions/checkout@v4	2026-07-30T19:21:02.0431080Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+android	Run actions/checkout@v4	2026-07-30T19:21:02.0477437Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+android	Run actions/checkout@v4	2026-07-30T19:21:02.0710098Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+android	Run actions/checkout@v4	2026-07-30T19:21:02.0753430Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+android	Run actions/checkout@v4	2026-07-30T19:21:02.0985457Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+android	Run actions/checkout@v4	2026-07-30T19:21:02.1026555Z ##[endgroup]
+android	Run actions/checkout@v4	2026-07-30T19:21:02.1028164Z ##[group]Fetching the repository
+android	Run actions/checkout@v4	2026-07-30T19:21:02.1037226Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1350cf03129ed2a2c891c9b98d005a26870c026b:refs/remotes/origin/main
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9376697Z From https://github.com/Rae-ARK/ARKium
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9377657Z  * [new ref]         1350cf03129ed2a2c891c9b98d005a26870c026b -> origin/main
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9412141Z ##[endgroup]
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9413292Z ##[group]Determining the checkout info
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9415080Z ##[endgroup]
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9421145Z [command]/usr/bin/git sparse-checkout disable
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9471848Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9503844Z ##[group]Checking out the ref
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9508465Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9655722Z Switched to a new branch 'main'
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9657290Z branch 'main' set up to track 'origin/main'.
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9665317Z ##[endgroup]
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9713564Z [command]/usr/bin/git log -1 --format=%H
+android	Run actions/checkout@v4	2026-07-30T19:21:02.9742091Z 1350cf03129ed2a2c891c9b98d005a26870c026b
+android	Run actions/setup-node@v4	﻿2026-07-30T19:21:03.0030904Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.0105488Z ##[group]Run actions/setup-node@v4
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.0106024Z with:
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.0106327Z   node-version: 22
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.0106630Z   cache: npm
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.0106908Z   always-auth: false
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.0107212Z   check-latest: false
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.0110531Z   token: ***
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.0110841Z ##[endgroup]
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.1605722Z Found in cache @ /opt/hostedtoolcache/node/22.23.1/x64
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.1610578Z (node:2383) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.1611638Z (Use `node --trace-deprecation ...` to show where the warning was created)
+android	Run actions/setup-node@v4	2026-07-30T19:21:03.1614313Z ##[group]Environment details
+android	Run actions/setup-node@v4	2026-07-30T19:21:05.9433189Z node: v22.23.1
+android	Run actions/setup-node@v4	2026-07-30T19:21:05.9434319Z npm: 10.9.8
+android	Run actions/setup-node@v4	2026-07-30T19:21:05.9434947Z yarn: 1.22.22
+android	Run actions/setup-node@v4	2026-07-30T19:21:05.9436415Z ##[endgroup]
+android	Run actions/setup-node@v4	2026-07-30T19:21:05.9461329Z [command]/opt/hostedtoolcache/node/22.23.1/x64/bin/npm config get cache
+android	Run actions/setup-node@v4	2026-07-30T19:21:06.2189008Z /home/runner/.npm
+android	Run actions/setup-node@v4	2026-07-30T19:21:06.4324015Z Cache hit for: node-cache-Linux-x64-npm-550075d7005552f0bed3ec3a8962f8b3883580c55780572614dd050aaf3195ed
+android	Run actions/setup-node@v4	2026-07-30T19:21:06.4438708Z (node:2383) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+android	Run actions/setup-node@v4	2026-07-30T19:21:07.6436269Z Received 43573107 of 43573107 (100.0%), 42.0 MBs/sec
+android	Run actions/setup-node@v4	2026-07-30T19:21:07.6441260Z Cache Size: ~42 MB (43573107 B)
+android	Run actions/setup-node@v4	2026-07-30T19:21:07.6473125Z [command]/usr/bin/tar -xf /home/runner/work/_temp/f57b27eb-6e68-4414-a379-96570379b072/cache.tzst -P -C /home/runner/work/ARKium/ARKium --use-compress-program unzstd
+android	Run actions/setup-node@v4	2026-07-30T19:21:07.7630994Z Cache restored successfully
+android	Run actions/setup-node@v4	2026-07-30T19:21:07.7654200Z Cache restored from key: node-cache-Linux-x64-npm-550075d7005552f0bed3ec3a8962f8b3883580c55780572614dd050aaf3195ed
+android	Run actions/setup-java@v4	﻿2026-07-30T19:21:07.7879966Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7881625Z ##[group]Run actions/setup-java@v4
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7881925Z with:
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7882140Z   distribution: temurin
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7882364Z   java-version: 21
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7882574Z   java-package: jdk
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7882800Z   check-latest: false
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7883014Z   server-id: github
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7883229Z   server-username: GITHUB_ACTOR
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7883506Z   server-password: GITHUB_TOKEN
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7883768Z   overwrite-settings: true
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7884012Z   job-status: success
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7886639Z   token: ***
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.7886844Z ##[endgroup]
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9543990Z ##[group]Installed distributions
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9777453Z Resolved Java 21.0.11+10 from tool-cache
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9778359Z Setting Java 21.0.11+10 as the default
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9784566Z (node:2431) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9785466Z (Use `node --trace-deprecation ...` to show where the warning was created)
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9788296Z Creating toolchains.xml for JDK version 21 from temurin
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9868508Z Writing to /home/runner/.m2/toolchains.xml
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9869033Z 
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9869301Z Java configuration:
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9869760Z   Distribution: temurin
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9870895Z   Version: 21.0.11+10
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9871400Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9871758Z 
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9872125Z ##[endgroup]
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9875397Z Creating settings.xml with server-id: github
+android	Run actions/setup-java@v4	2026-07-30T19:21:07.9897744Z Writing to /home/runner/.m2/settings.xml
+android	Run npm ci	﻿2026-07-30T19:21:08.0062176Z ##[group]Run npm ci
+android	Run npm ci	2026-07-30T19:21:08.0062539Z [36;1mnpm ci[0m
+android	Run npm ci	2026-07-30T19:21:08.0214817Z shell: /usr/bin/bash -e {0}
+android	Run npm ci	2026-07-30T19:21:08.0215367Z env:
+android	Run npm ci	2026-07-30T19:21:08.0215898Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Run npm ci	2026-07-30T19:21:08.0216802Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Run npm ci	2026-07-30T19:21:08.0217473Z ##[endgroup]
+android	Run npm ci	2026-07-30T19:21:12.2343632Z 
+android	Run npm ci	2026-07-30T19:21:12.2344340Z > arkium@0.0.1 prepare
+android	Run npm ci	2026-07-30T19:21:12.2350894Z > svelte-kit sync || echo ''
+android	Run npm ci	2026-07-30T19:21:12.2351284Z 
+android	Run npm ci	2026-07-30T19:21:13.4065381Z 
+android	Run npm ci	2026-07-30T19:21:13.4066482Z added 275 packages, and audited 276 packages in 5s
+android	Run npm ci	2026-07-30T19:21:13.4067101Z 
+android	Run npm ci	2026-07-30T19:21:13.4067511Z 73 packages are looking for funding
+android	Run npm ci	2026-07-30T19:21:13.4068061Z   run `npm fund` for details
+android	Run npm ci	2026-07-30T19:21:13.4172620Z 
+android	Run npm ci	2026-07-30T19:21:13.4173239Z 3 low severity vulnerabilities
+android	Run npm ci	2026-07-30T19:21:13.4173578Z 
+android	Run npm ci	2026-07-30T19:21:13.4173999Z To address all issues (including breaking changes), run:
+android	Run npm ci	2026-07-30T19:21:13.4174473Z   npm audit fix --force
+android	Run npm ci	2026-07-30T19:21:13.4174637Z 
+android	Run npm ci	2026-07-30T19:21:13.4174804Z Run `npm audit` for details.
+android	Run npm run build	﻿2026-07-30T19:21:13.4765440Z ##[group]Run npm run build
+android	Run npm run build	2026-07-30T19:21:13.4765761Z [36;1mnpm run build[0m
+android	Run npm run build	2026-07-30T19:21:13.4809459Z shell: /usr/bin/bash -e {0}
+android	Run npm run build	2026-07-30T19:21:13.4809723Z env:
+android	Run npm run build	2026-07-30T19:21:13.4810047Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Run npm run build	2026-07-30T19:21:13.4810820Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Run npm run build	2026-07-30T19:21:13.4811208Z ##[endgroup]
+android	Run npm run build	2026-07-30T19:21:13.5905232Z 
+android	Run npm run build	2026-07-30T19:21:13.5905899Z > arkium@0.0.1 build
+android	Run npm run build	2026-07-30T19:21:13.5906332Z > vite build
+android	Run npm run build	2026-07-30T19:21:13.5906478Z 
+android	Run npm run build	2026-07-30T19:21:14.6526525Z [36mvite v8.2.0 [32mbuilding ssr environment for production...[36m[39m
+android	Run npm run build	2026-07-30T19:21:14.6640682Z [2K
+android	Run npm run build	2026-07-30T19:21:14.8657049Z transforming...✓ 165 modules transformed.
+android	Run npm run build	2026-07-30T19:21:14.8949519Z rendering chunks...
+android	Run npm run build	2026-07-30T19:21:15.8874574Z [36mvite v8.2.0 [32mbuilding client environment for production...[36m[39m
+android	Run npm run build	2026-07-30T19:21:15.8950015Z [2K
+android	Run npm run build	2026-07-30T19:21:16.0372013Z transforming...✓ 183 modules transformed.
+android	Run npm run build	2026-07-30T19:21:16.0557714Z rendering chunks...
+android	Run npm run build	2026-07-30T19:21:16.1022444Z computing gzip size...
+android	Run npm run build	2026-07-30T19:21:16.1026528Z .svelte-kit/output/client/_app/version.json                        0.02 kB │ gzip:  0.04 kB
+android	Run npm run build	2026-07-30T19:21:16.1027961Z .svelte-kit/output/client/.vite/manifest.json                      5.99 kB │ gzip:  0.81 kB
+android	Run npm run build	2026-07-30T19:21:16.1029304Z .svelte-kit/output/client/_app/immutable/assets/2.W0_cSOBO.css     0.27 kB │ gzip:  0.18 kB
+android	Run npm run build	2026-07-30T19:21:16.1030534Z .svelte-kit/output/client/_app/immutable/assets/10.BycwiL_n.css    0.62 kB │ gzip:  0.32 kB
+android	Run npm run build	2026-07-30T19:21:16.1031381Z .svelte-kit/output/client/_app/immutable/assets/0.DUXZvWnk.css     1.10 kB │ gzip:  0.50 kB
+android	Run npm run build	2026-07-30T19:21:16.1032159Z .svelte-kit/output/client/_app/immutable/chunks/xihTtKlq.js        0.06 kB │ gzip:  0.08 kB
+android	Run npm run build	2026-07-30T19:21:16.1032925Z .svelte-kit/output/client/_app/immutable/chunks/CD2kRzN6.js        0.07 kB │ gzip:  0.08 kB
+android	Run npm run build	2026-07-30T19:21:16.1033695Z .svelte-kit/output/client/_app/immutable/entry/start.DNM32cPn.js   0.07 kB │ gzip:  0.08 kB
+android	Run npm run build	2026-07-30T19:21:16.1034667Z .svelte-kit/output/client/_app/immutable/nodes/5.EXUzSSQr.js       0.22 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:16.1036698Z .svelte-kit/output/client/_app/immutable/nodes/7.BU5tVHHO.js       0.22 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:16.1038349Z .svelte-kit/output/client/_app/immutable/nodes/11.n3ee30T1.js      0.22 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:16.1039611Z .svelte-kit/output/client/_app/immutable/nodes/9.C4Vwxj_g.js       0.23 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:16.1040819Z .svelte-kit/output/client/_app/immutable/nodes/6.TZ_7aIOB.js       0.23 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:16.1041627Z .svelte-kit/output/client/_app/immutable/nodes/8.CLt6kFF_.js       0.23 kB │ gzip:  0.20 kB
+android	Run npm run build	2026-07-30T19:21:16.1042379Z .svelte-kit/output/client/_app/immutable/nodes/4.5cUTNCXX.js       0.23 kB │ gzip:  0.20 kB
+android	Run npm run build	2026-07-30T19:21:16.1043125Z .svelte-kit/output/client/_app/immutable/nodes/3.Di89uoW0.js       0.24 kB │ gzip:  0.20 kB
+android	Run npm run build	2026-07-30T19:21:16.1043891Z .svelte-kit/output/client/_app/immutable/chunks/Cl44PYgE.js        0.33 kB │ gzip:  0.18 kB
+android	Run npm run build	2026-07-30T19:21:16.1044645Z .svelte-kit/output/client/_app/immutable/nodes/1.DI-nKhB4.js       0.37 kB │ gzip:  0.26 kB
+android	Run npm run build	2026-07-30T19:21:16.1045862Z .svelte-kit/output/client/_app/immutable/nodes/2.C5MMnSCz.js       0.37 kB │ gzip:  0.24 kB
+android	Run npm run build	2026-07-30T19:21:16.1047216Z .svelte-kit/output/client/_app/immutable/chunks/Bjy-W4x2.js        1.36 kB │ gzip:  0.65 kB
+android	Run npm run build	2026-07-30T19:21:16.1048701Z .svelte-kit/output/client/_app/immutable/nodes/0.CA9ig-h7.js       1.59 kB │ gzip:  0.81 kB
+android	Run npm run build	2026-07-30T19:21:16.1050014Z .svelte-kit/output/client/_app/immutable/nodes/10.7uUZl7zB.js      1.60 kB │ gzip:  0.80 kB
+android	Run npm run build	2026-07-30T19:21:16.1051662Z .svelte-kit/output/client/_app/immutable/entry/app.Bo1AquG6.js     5.22 kB │ gzip:  2.18 kB
+android	Run npm run build	2026-07-30T19:21:16.1052933Z .svelte-kit/output/client/_app/immutable/chunks/C8b8gbL9.js       27.40 kB │ gzip: 10.62 kB
+android	Run npm run build	2026-07-30T19:21:16.1053734Z .svelte-kit/output/client/_app/immutable/chunks/D1NNMeIV.js       41.61 kB │ gzip: 16.04 kB
+android	Run npm run build	2026-07-30T19:21:16.1054393Z 
+android	Run npm run build	2026-07-30T19:21:16.1054599Z [32m✓ built in 216ms[39m
+android	Run npm run build	2026-07-30T19:21:17.0491545Z computing gzip size...
+android	Run npm run build	2026-07-30T19:21:17.0524974Z .svelte-kit/output/server/.vite/manifest.json                              5.73 kB │ gzip:  0.79 kB
+android	Run npm run build	2026-07-30T19:21:17.0526589Z .svelte-kit/output/server/_app/immutable/assets/_page.W0_cSOBO.css         0.27 kB │ gzip:  0.18 kB
+android	Run npm run build	2026-07-30T19:21:17.0528211Z .svelte-kit/output/server/_app/immutable/assets/_page.BycwiL_n.css         0.62 kB │ gzip:  0.32 kB
+android	Run npm run build	2026-07-30T19:21:17.0529763Z .svelte-kit/output/server/_app/immutable/assets/_layout.DUXZvWnk.css       1.10 kB │ gzip:  0.50 kB
+android	Run npm run build	2026-07-30T19:21:17.0531611Z .svelte-kit/output/server/entries/pages/_layout.ts.js                      0.07 kB │ gzip:  0.09 kB
+android	Run npm run build	2026-07-30T19:21:17.0533176Z .svelte-kit/output/server/chunks/settings.svelte.js                        0.14 kB │ gzip:  0.12 kB
+android	Run npm run build	2026-07-30T19:21:17.0534677Z .svelte-kit/output/server/env.js                                           0.22 kB │ gzip:  0.14 kB
+android	Run npm run build	2026-07-30T19:21:17.0536187Z .svelte-kit/output/server/entries/pages/help/_page.svelte.js               0.23 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:17.0537715Z .svelte-kit/output/server/entries/pages/novel/_page.svelte.js              0.23 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:17.0539321Z .svelte-kit/output/server/entries/pages/terms/_page.svelte.js              0.24 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:17.0541191Z .svelte-kit/output/server/entries/pages/reader/_page.svelte.js             0.24 kB │ gzip:  0.20 kB
+android	Run npm run build	2026-07-30T19:21:17.0542822Z .svelte-kit/output/server/entries/pages/import/_page.svelte.js             0.24 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:17.0544440Z .svelte-kit/output/server/entries/pages/privacy/_page.svelte.js            0.24 kB │ gzip:  0.20 kB
+android	Run npm run build	2026-07-30T19:21:17.0546116Z .svelte-kit/output/server/entries/pages/getting-started/_page.svelte.js    0.25 kB │ gzip:  0.20 kB
+android	Run npm run build	2026-07-30T19:21:17.0547806Z .svelte-kit/output/server/entries/pages/diagnostics/_page.svelte.js        0.25 kB │ gzip:  0.20 kB
+android	Run npm run build	2026-07-30T19:21:17.0549381Z .svelte-kit/output/server/chunks/env.js                                    0.28 kB │ gzip:  0.17 kB
+android	Run npm run build	2026-07-30T19:21:17.0551087Z .svelte-kit/output/server/entries/pages/_page.svelte.js                    0.39 kB │ gzip:  0.24 kB
+android	Run npm run build	2026-07-30T19:21:17.0552638Z .svelte-kit/output/server/internal.js                                      0.40 kB │ gzip:  0.19 kB
+android	Run npm run build	2026-07-30T19:21:17.0554626Z .svelte-kit/output/server/entries/fallbacks/error.svelte.js                0.42 kB │ gzip:  0.26 kB
+android	Run npm run build	2026-07-30T19:21:17.0556239Z .svelte-kit/output/server/chunks/internal2.js                              1.02 kB │ gzip:  0.45 kB
+android	Run npm run build	2026-07-30T19:21:17.0557814Z .svelte-kit/output/server/entries/pages/_layout.svelte.js                  1.59 kB │ gzip:  0.71 kB
+android	Run npm run build	2026-07-30T19:21:17.0559409Z .svelte-kit/output/server/entries/pages/settings/_page.svelte.js           1.96 kB │ gzip:  0.81 kB
+android	Run npm run build	2026-07-30T19:21:17.0561297Z .svelte-kit/output/server/chunks/state.js                                  5.63 kB │ gzip:  2.21 kB
+android	Run npm run build	2026-07-30T19:21:17.0562832Z .svelte-kit/output/server/chunks/shared.js                                10.57 kB │ gzip:  3.38 kB
+android	Run npm run build	2026-07-30T19:21:17.0564318Z .svelte-kit/output/server/chunks/exports.js                               12.09 kB │ gzip:  3.88 kB
+android	Run npm run build	2026-07-30T19:21:17.0565684Z .svelte-kit/output/server/chunks/internal.js                              25.47 kB │ gzip:  7.82 kB
+android	Run npm run build	2026-07-30T19:21:17.0567178Z .svelte-kit/output/server/chunks/utils.js                                 31.77 kB │ gzip:  9.35 kB
+android	Run npm run build	2026-07-30T19:21:17.0568738Z .svelte-kit/output/server/remote-entry.js                                 54.49 kB │ gzip: 12.02 kB
+android	Run npm run build	2026-07-30T19:21:17.0570516Z .svelte-kit/output/server/index.js                                       124.85 kB │ gzip: 31.69 kB
+android	Run npm run build	2026-07-30T19:21:17.0572013Z .svelte-kit/output/server/chunks/server.js                               127.34 kB │ gzip: 33.08 kB
+android	Run npm run build	2026-07-30T19:21:17.0572998Z 
+android	Run npm run build	2026-07-30T19:21:17.0573365Z [32m✓ built in 2.40s[39m
+android	Run npm run build	2026-07-30T19:21:17.0573646Z 
+android	Run npm run build	2026-07-30T19:21:17.0574084Z Run npm run preview to preview your production build locally.
+android	Run npm run build	2026-07-30T19:21:17.0574556Z 
+android	Run npm run build	2026-07-30T19:21:17.0574825Z > Using @sveltejs/adapter-static
+android	Run npm run build	2026-07-30T19:21:17.1574878Z   Wrote site to "build"
+android	Run npm run build	2026-07-30T19:21:17.1579481Z   ✔ done
+android	Run npx cap sync android	﻿2026-07-30T19:21:17.2764512Z ##[group]Run npx cap sync android
+android	Run npx cap sync android	2026-07-30T19:21:17.2764876Z [36;1mnpx cap sync android[0m
+android	Run npx cap sync android	2026-07-30T19:21:17.2808528Z shell: /usr/bin/bash -e {0}
+android	Run npx cap sync android	2026-07-30T19:21:17.2808788Z env:
+android	Run npx cap sync android	2026-07-30T19:21:17.2809093Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Run npx cap sync android	2026-07-30T19:21:17.2809591Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Run npx cap sync android	2026-07-30T19:21:17.2809974Z ##[endgroup]
+android	Run npx cap sync android	2026-07-30T19:21:18.0162831Z ✔ Copying web assets from build to android/app/src/main/assets/public in 9.48ms
+android	Run npx cap sync android	2026-07-30T19:21:18.0171260Z ✔ Creating capacitor.config.json in android/app/src/main/assets in 555.92μs
+android	Run npx cap sync android	2026-07-30T19:21:18.0232851Z ✔ copy android in 28.20ms
+android	Run npx cap sync android	2026-07-30T19:21:18.0354566Z ✔ Updating Android plugins in 3.58ms
+android	Run npx cap sync android	2026-07-30T19:21:18.0543906Z ✔ update android in 26.52ms
+android	Run npx cap sync android	2026-07-30T19:21:18.0619750Z [info] Sync finished in 0.075s
+android	Build Debug APK	﻿2026-07-30T19:21:18.1070505Z ##[group]Run ./gradlew assembleDebug
+android	Build Debug APK	2026-07-30T19:21:18.1071145Z [36;1m./gradlew assembleDebug[0m
+android	Build Debug APK	2026-07-30T19:21:18.1135792Z shell: /usr/bin/bash -e {0}
+android	Build Debug APK	2026-07-30T19:21:18.1136263Z env:
+android	Build Debug APK	2026-07-30T19:21:18.1136811Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Build Debug APK	2026-07-30T19:21:18.1137718Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+android	Build Debug APK	2026-07-30T19:21:18.1138411Z ##[endgroup]
+android	Build Debug APK	2026-07-30T19:21:20.3973543Z Downloading https://services.gradle.org/distributions/gradle-8.14.3-all.zip
+android	Build Debug APK	2026-07-30T19:21:23.6483728Z .....................10%.....................20%......................30%.....................40%......................50%.....................60%.....................70%......................80%.....................90%......................100%
+android	Build Debug APK	2026-07-30T19:21:27.1757482Z 
+android	Build Debug APK	2026-07-30T19:21:27.1759505Z Welcome to Gradle 8.14.3!
+android	Build Debug APK	2026-07-30T19:21:27.1759852Z 
+android	Build Debug APK	2026-07-30T19:21:27.1767540Z Here are the highlights of this release:
+android	Build Debug APK	2026-07-30T19:21:27.1768146Z  - Java 24 support
+android	Build Debug APK	2026-07-30T19:21:27.1768593Z  - GraalVM Native Image toolchain selection
+android	Build Debug APK	2026-07-30T19:21:27.1768951Z  - Enhancements to test reporting
+android	Build Debug APK	2026-07-30T19:21:27.1769631Z  - Build Authoring improvements
+android	Build Debug APK	2026-07-30T19:21:27.1769815Z 
+android	Build Debug APK	2026-07-30T19:21:27.1770371Z For more details see https://docs.gradle.org/8.14.3/release-notes.html
+android	Build Debug APK	2026-07-30T19:21:27.1770796Z 
+android	Build Debug APK	2026-07-30T19:21:27.3772024Z Starting a Gradle Daemon (subsequent builds will be faster)
+android	Build Debug APK	2026-07-30T19:22:00.9751666Z 
+android	Build Debug APK	2026-07-30T19:22:00.9769130Z > Configure project :app
+android	Build Debug APK	2026-07-30T19:22:00.9812579Z WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+android	Build Debug APK	2026-07-30T19:22:03.1749885Z 
+android	Build Debug APK	2026-07-30T19:22:03.1764344Z > Configure project :capacitor-cordova-android-plugins
+android	Build Debug APK	2026-07-30T19:22:03.1784938Z WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+android	Build Debug APK	2026-07-30T19:22:04.5769508Z 
+android	Build Debug APK	2026-07-30T19:22:04.5791066Z > Task :app:preBuild UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:04.5813719Z > Task :app:preDebugBuild UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:04.5815083Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+android	Build Debug APK	2026-07-30T19:22:04.6749906Z > Task :capacitor-android:preBuild UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:04.6751287Z > Task :capacitor-android:preDebugBuild UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:04.6752370Z > Task :capacitor-cordova-android-plugins:preBuild UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:04.6753606Z > Task :capacitor-cordova-android-plugins:preDebugBuild UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:04.6754537Z > Task :app:javaPreCompileDebug
+android	Build Debug APK	2026-07-30T19:22:04.6755453Z > Task :capacitor-cordova-android-plugins:writeDebugAarMetadata
+android	Build Debug APK	2026-07-30T19:22:04.6756430Z > Task :capacitor-android:writeDebugAarMetadata
+android	Build Debug APK	2026-07-30T19:22:04.6757359Z > Task :capacitor-android:processDebugNavigationResources
+android	Build Debug APK	2026-07-30T19:22:12.0750445Z > Task :capacitor-cordova-android-plugins:processDebugNavigationResources
+android	Build Debug APK	2026-07-30T19:22:12.0771052Z > Task :app:checkDebugAarMetadata
+android	Build Debug APK	2026-07-30T19:22:12.0771914Z > Task :app:processDebugNavigationResources
+android	Build Debug APK	2026-07-30T19:22:12.5749473Z > Task :app:generateDebugResValues
+android	Build Debug APK	2026-07-30T19:22:12.5750707Z > Task :capacitor-android:generateDebugResValues
+android	Build Debug APK	2026-07-30T19:22:12.5751392Z > Task :app:compileDebugNavigationResources
+android	Build Debug APK	2026-07-30T19:22:12.5752107Z > Task :capacitor-android:generateDebugResources
+android	Build Debug APK	2026-07-30T19:22:12.6751550Z > Task :capacitor-android:packageDebugResources
+android	Build Debug APK	2026-07-30T19:22:12.6752586Z > Task :capacitor-cordova-android-plugins:generateDebugResValues
+android	Build Debug APK	2026-07-30T19:22:12.6822026Z > Task :capacitor-cordova-android-plugins:generateDebugResources
+android	Build Debug APK	2026-07-30T19:22:12.6837876Z > Task :capacitor-cordova-android-plugins:packageDebugResources
+android	Build Debug APK	2026-07-30T19:22:12.6838937Z > Task :app:mapDebugSourceSetPaths
+android	Build Debug APK	2026-07-30T19:22:12.6839894Z > Task :app:generateDebugResources
+android	Build Debug APK	2026-07-30T19:22:13.3749201Z > Task :app:packageDebugResources
+android	Build Debug APK	2026-07-30T19:22:13.9749103Z > Task :app:mergeDebugResources
+android	Build Debug APK	2026-07-30T19:22:14.3761683Z > Task :app:createDebugCompatibleScreenManifests
+android	Build Debug APK	2026-07-30T19:22:14.3781513Z > Task :app:extractDeepLinksDebug
+android	Build Debug APK	2026-07-30T19:22:14.4752816Z > Task :capacitor-android:extractDeepLinksDebug
+android	Build Debug APK	2026-07-30T19:22:14.4753790Z > Task :capacitor-cordova-android-plugins:extractDeepLinksDebug
+android	Build Debug APK	2026-07-30T19:22:14.4754725Z > Task :capacitor-android:compileDebugLibraryResources
+android	Build Debug APK	2026-07-30T19:22:14.4755607Z > Task :capacitor-cordova-android-plugins:processDebugManifest
+android	Build Debug APK	2026-07-30T19:22:14.5751541Z > Task :capacitor-android:processDebugManifest
+android	Build Debug APK	2026-07-30T19:22:14.5811195Z > Task :app:parseDebugLocalResources
+android	Build Debug APK	2026-07-30T19:22:14.5841224Z > Task :capacitor-android:parseDebugLocalResources
+android	Build Debug APK	2026-07-30T19:22:14.5842531Z > Task :capacitor-cordova-android-plugins:compileDebugLibraryResources
+android	Build Debug APK	2026-07-30T19:22:14.6754309Z > Task :app:processDebugMainManifest
+android	Build Debug APK	2026-07-30T19:22:14.9770626Z > Task :app:processDebugManifest
+android	Build Debug APK	2026-07-30T19:22:14.9793626Z > Task :app:processDebugManifestForPackage
+android	Build Debug APK	2026-07-30T19:22:14.9810600Z > Task :capacitor-android:javaPreCompileDebug
+android	Build Debug APK	2026-07-30T19:22:14.9818453Z > Task :capacitor-cordova-android-plugins:javaPreCompileDebug
+android	Build Debug APK	2026-07-30T19:22:14.9851499Z > Task :capacitor-cordova-android-plugins:parseDebugLocalResources
+android	Build Debug APK	2026-07-30T19:22:14.9854145Z > Task :capacitor-android:generateDebugRFile
+android	Build Debug APK	2026-07-30T19:22:15.0749686Z > Task :app:mergeDebugShaders
+android	Build Debug APK	2026-07-30T19:22:15.0757890Z > Task :capacitor-cordova-android-plugins:generateDebugRFile
+android	Build Debug APK	2026-07-30T19:22:21.6755781Z 
+android	Build Debug APK	2026-07-30T19:22:21.6771690Z Note: Some input files use unchecked or unsafe operations.
+android	Build Debug APK	2026-07-30T19:22:21.6772559Z > Task :capacitor-android:compileDebugJavaWithJavac
+android	Build Debug APK	2026-07-30T19:22:21.6781922Z Note: Recompile with -Xlint:unchecked for details.
+android	Build Debug APK	2026-07-30T19:22:24.4760927Z 
+android	Build Debug APK	2026-07-30T19:22:24.4802824Z > Task :capacitor-cordova-android-plugins:compileDebugJavaWithJavac NO-SOURCE
+android	Build Debug APK	2026-07-30T19:22:24.4824284Z > Task :app:compileDebugShaders NO-SOURCE
+android	Build Debug APK	2026-07-30T19:22:24.4825301Z > Task :app:generateDebugAssets UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:24.4826372Z > Task :capacitor-cordova-android-plugins:bundleLibCompileToJarDebug
+android	Build Debug APK	2026-07-30T19:22:24.4828047Z > Task :capacitor-android:mergeDebugShaders
+android	Build Debug APK	2026-07-30T19:22:24.4829282Z > Task :capacitor-android:compileDebugShaders NO-SOURCE
+android	Build Debug APK	2026-07-30T19:22:24.4830745Z > Task :capacitor-android:generateDebugAssets UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:24.5749398Z > Task :capacitor-android:mergeDebugAssets
+android	Build Debug APK	2026-07-30T19:22:24.5763115Z > Task :capacitor-android:bundleLibCompileToJarDebug
+android	Build Debug APK	2026-07-30T19:22:24.5807845Z > Task :capacitor-cordova-android-plugins:mergeDebugShaders
+android	Build Debug APK	2026-07-30T19:22:24.5832531Z > Task :capacitor-cordova-android-plugins:compileDebugShaders NO-SOURCE
+android	Build Debug APK	2026-07-30T19:22:24.5881723Z > Task :capacitor-cordova-android-plugins:generateDebugAssets UP-TO-DATE
+android	Build Debug APK	2026-07-30T19:22:24.5952569Z > Task :capacitor-cordova-android-plugins:mergeDebugAssets
+android	Build Debug APK	2026-07-30T19:22:24.6781382Z > Task :app:mergeDebugAssets
+android	Build Debug APK	2026-07-30T19:22:24.6811350Z > Task :capacitor-cordova-android-plugins:bundleLibRuntimeToJarDebug
+android	Build Debug APK	2026-07-30T19:22:24.6871220Z > Task :capacitor-android:bundleLibRuntimeToJarDebug
+android	Build Debug APK	2026-07-30T19:22:24.6900997Z > Task :app:compressDebugAssets
+android	Build Debug APK	2026-07-30T19:22:24.6931125Z > Task :app:desugarDebugFileDependencies
+android	Build Debug APK	2026-07-30T19:22:24.7750643Z > Task :app:processDebugJavaRes NO-SOURCE
+android	Build Debug APK	2026-07-30T19:22:24.7791349Z > Task :capacitor-android:processDebugJavaRes NO-SOURCE
+android	Build Debug APK	2026-07-30T19:22:24.7792821Z > Task :capacitor-cordova-android-plugins:processDebugJavaRes NO-SOURCE
+android	Build Debug APK	2026-07-30T19:22:25.0792739Z > Task :app:processDebugResources
+android	Build Debug APK	2026-07-30T19:22:25.6754473Z /home/runner/work/ARKium/ARKium/android/app/src/main/java/com/raeark/arkium/plugins/FileProviderPlugin.java:12: error: cannot find symbol
+android	Build Debug APK	2026-07-30T19:22:25.6755599Z 
+android	Build Debug APK	2026-07-30T19:22:25.6781421Z import com.getcapacitor.annotation.PluginMethod;
+android	Build Debug APK	2026-07-30T19:22:25.6791172Z > Task :app:compileDebugJavaWithJavac FAILED
+android	Build Debug APK	2026-07-30T19:22:25.6811012Z                                   ^
+android	Build Debug APK	2026-07-30T19:22:25.6811938Z   symbol:   class PluginMethod
+android	Build Debug APK	2026-07-30T19:22:25.6840996Z   location: package com.getcapacitor.annotation
+android	Build Debug APK	2026-07-30T19:22:25.6871794Z /home/runner/work/ARKium/ARKium/android/app/src/main/java/com/raeark/arkium/plugins/FileProviderPlugin.java:19: error: cannot find symbol
+android	Build Debug APK	2026-07-30T19:22:25.6900771Z     @PluginMethod()
+android	Build Debug APK	2026-07-30T19:22:25.6901352Z      ^
+android	Build Debug APK	2026-07-30T19:22:25.6930881Z   symbol:   class PluginMethod
+android	Build Debug APK	2026-07-30T19:22:25.6960876Z   location: class FileProviderPlugin
+android	Build Debug APK	2026-07-30T19:22:25.6990785Z 2 errors
+android	Build Debug APK	2026-07-30T19:22:25.9750922Z 
+android	Build Debug APK	2026-07-30T19:22:25.9751755Z > Task :app:mergeDebugJavaResource
+android	Build Debug APK	2026-07-30T19:22:28.0751374Z 
+android	Build Debug APK	2026-07-30T19:22:28.0751492Z 
+android	Build Debug APK	2026-07-30T19:22:28.0782010Z FAILURE: Build failed with an exception.
+android	Build Debug APK	2026-07-30T19:22:28.0783541Z [Incubating] Problems report is available at: file:///home/runner/work/ARKium/ARKium/android/build/reports/problems/problems-report.html
+android	Build Debug APK	2026-07-30T19:22:28.0810554Z 
+android	Build Debug APK	2026-07-30T19:22:28.0811029Z 53 actionable tasks: 53 executed
+android	Build Debug APK	2026-07-30T19:22:28.0825669Z * What went wrong:
+android	Build Debug APK	2026-07-30T19:22:28.0826636Z Execution failed for task ':app:compileDebugJavaWithJavac'.
+android	Build Debug APK	2026-07-30T19:22:28.0827696Z > Compilation failed; see the compiler output below.
+android	Build Debug APK	2026-07-30T19:22:28.0829241Z   /home/runner/work/ARKium/ARKium/android/app/src/main/java/com/raeark/arkium/plugins/FileProviderPlugin.java:12: error: cannot find symbol
+android	Build Debug APK	2026-07-30T19:22:28.0831596Z   import com.getcapacitor.annotation.PluginMethod;
+android	Build Debug APK	2026-07-30T19:22:28.0832536Z                                     ^
+android	Build Debug APK	2026-07-30T19:22:28.0833258Z     symbol:   class PluginMethod
+android	Build Debug APK	2026-07-30T19:22:28.0834026Z     location: package com.getcapacitor.annotation
+android	Build Debug APK	2026-07-30T19:22:28.0837830Z   /home/runner/work/ARKium/ARKium/android/app/src/main/java/com/raeark/arkium/plugins/FileProviderPlugin.java:19: error: cannot find symbol
+android	Build Debug APK	2026-07-30T19:22:28.0841203Z       @PluginMethod()
+android	Build Debug APK	2026-07-30T19:22:28.0841909Z        ^
+android	Build Debug APK	2026-07-30T19:22:28.0842478Z     symbol:   class PluginMethod
+android	Build Debug APK	2026-07-30T19:22:28.0843142Z     location: class FileProviderPlugin
+android	Build Debug APK	2026-07-30T19:22:28.0843744Z   2 errors
+android	Build Debug APK	2026-07-30T19:22:28.0844128Z 
+android	Build Debug APK	2026-07-30T19:22:28.0844427Z * Try:
+android	Build Debug APK	2026-07-30T19:22:28.0845227Z > Check your code and dependencies to fix the compilation error(s)
+android	Build Debug APK	2026-07-30T19:22:28.0846172Z > Run with --scan to get full insights.
+android	Build Debug APK	2026-07-30T19:22:28.0846696Z 
+android	Build Debug APK	2026-07-30T19:22:28.0847056Z BUILD FAILED in 1m 8s
+android	Build Debug APK	2026-07-30T19:22:28.5258588Z ##[error]Process completed with exit code 1.
+android	Post Run actions/setup-java@v4	﻿2026-07-30T19:22:28.5369267Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+android	Post Run actions/setup-java@v4	2026-07-30T19:22:28.5370751Z Post job cleanup.
+android	Post Run actions/setup-java@v4	2026-07-30T19:22:28.6671909Z (node:2822) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+android	Post Run actions/setup-java@v4	2026-07-30T19:22:28.6672875Z (Use `node --trace-deprecation ...` to show where the warning was created)
+android	Post Run actions/checkout@v4	﻿2026-07-30T19:22:28.6896763Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.6898080Z Post job cleanup.
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.7851274Z [command]/usr/bin/git version
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.7901095Z git version 2.54.0
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.7942779Z Temporarily overriding HOME='/home/runner/work/_temp/b7902ca3-04ea-47ee-9a59-687ea5a14569' before making global git config changes
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.7944162Z Adding repository directory to the temporary git global config as a safe directory
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.7948910Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ARKium/ARKium
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.7991482Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.8029027Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.8281701Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.8327224Z http.https://github.com/.extraheader
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.8353286Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.8377762Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.8741886Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+android	Post Run actions/checkout@v4	2026-07-30T19:22:28.8789179Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+android	Complete job	﻿2026-07-30T19:22:28.9267523Z Cleaning up orphan processes
+android	Complete job	2026-07-30T19:22:28.9581854Z Terminate orphan process: pid (2588) (java)
+android	Complete job	2026-07-30T19:22:28.9594621Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+svelte	Set up job	﻿2026-07-30T19:20:59.2599206Z Current runner version: '2.336.0'
+svelte	Set up job	2026-07-30T19:20:59.2628857Z ##[group]Runner Image Provisioner
+svelte	Set up job	2026-07-30T19:20:59.2630025Z Hosted Compute Agent
+svelte	Set up job	2026-07-30T19:20:59.2631215Z Version: 20260707.563
+svelte	Set up job	2026-07-30T19:20:59.2632133Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+svelte	Set up job	2026-07-30T19:20:59.2633390Z Build Date: 2026-07-07T19:33:50Z
+svelte	Set up job	2026-07-30T19:20:59.2634465Z Worker ID: {b03d67ed-bd78-421e-9e17-2ec7b0e7095e}
+svelte	Set up job	2026-07-30T19:20:59.2635548Z Azure Region: eastus2
+svelte	Set up job	2026-07-30T19:20:59.2636476Z ##[endgroup]
+svelte	Set up job	2026-07-30T19:20:59.2638568Z ##[group]Operating System
+svelte	Set up job	2026-07-30T19:20:59.2639539Z Ubuntu
+svelte	Set up job	2026-07-30T19:20:59.2640607Z 24.04.4
+svelte	Set up job	2026-07-30T19:20:59.2641358Z LTS
+svelte	Set up job	2026-07-30T19:20:59.2642155Z ##[endgroup]
+svelte	Set up job	2026-07-30T19:20:59.2642945Z ##[group]Runner Image
+svelte	Set up job	2026-07-30T19:20:59.2643856Z Image: ubuntu-24.04
+svelte	Set up job	2026-07-30T19:20:59.2644748Z Version: 20260726.254.1
+svelte	Set up job	2026-07-30T19:20:59.2646339Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260726.254/images/ubuntu/Ubuntu2404-Readme.md
+svelte	Set up job	2026-07-30T19:20:59.2648935Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260726.254
+svelte	Set up job	2026-07-30T19:20:59.2650652Z ##[endgroup]
+svelte	Set up job	2026-07-30T19:20:59.2652573Z ##[group]GITHUB_TOKEN Permissions
+svelte	Set up job	2026-07-30T19:20:59.2655364Z Contents: read
+svelte	Set up job	2026-07-30T19:20:59.2656374Z Metadata: read
+svelte	Set up job	2026-07-30T19:20:59.2657220Z Packages: read
+svelte	Set up job	2026-07-30T19:20:59.2658609Z ##[endgroup]
+svelte	Set up job	2026-07-30T19:20:59.2661739Z Secret source: Actions
+svelte	Set up job	2026-07-30T19:20:59.2663565Z Prepare workflow directory
+svelte	Set up job	2026-07-30T19:20:59.3111086Z Prepare all required actions
+svelte	Set up job	2026-07-30T19:20:59.3177326Z Getting action download info
+svelte	Set up job	2026-07-30T19:20:59.5281304Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+svelte	Set up job	2026-07-30T19:20:59.6547741Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+svelte	Set up job	2026-07-30T19:20:59.8524198Z Complete job name: svelte
+svelte	Run actions/checkout@v4	﻿2026-07-30T19:20:59.9425683Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9434597Z ##[group]Run actions/checkout@v4
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9435317Z with:
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9435760Z   repository: Rae-ARK/ARKium
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9439550Z   token: ***
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9439989Z   ssh-strict: true
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9440787Z   ssh-user: git
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9441422Z   persist-credentials: true
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9441917Z   clean: true
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9442359Z   sparse-checkout-cone-mode: true
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9442871Z   fetch-depth: 1
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9443290Z   fetch-tags: false
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9443728Z   show-progress: true
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9444162Z   lfs: false
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9444564Z   submodules: false
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9445052Z   set-safe-directory: true
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9445546Z   allow-unsafe-pr-checkout: false
+svelte	Run actions/checkout@v4	2026-07-30T19:20:59.9446357Z ##[endgroup]
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0564964Z Syncing repository: Rae-ARK/ARKium
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0567200Z ##[group]Getting Git version info
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0567915Z Working directory is '/home/runner/work/ARKium/ARKium'
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0569382Z [command]/usr/bin/git version
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0620423Z git version 2.54.0
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0643666Z ##[endgroup]
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0661320Z Temporarily overriding HOME='/home/runner/work/_temp/a3aa8864-55e6-4b9a-b6fb-7f7d6c659de9' before making global git config changes
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0663689Z Adding repository directory to the temporary git global config as a safe directory
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0669130Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ARKium/ARKium
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0751051Z Deleting the contents of '/home/runner/work/ARKium/ARKium'
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0752955Z ##[group]Initializing the repository
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0754074Z [command]/usr/bin/git init /home/runner/work/ARKium/ARKium
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0890296Z hint: Using 'master' as the name for the initial branch. This default branch name
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0892089Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0902085Z hint: to use in all of your new repositories, which will suppress this warning,
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0903840Z hint: call:
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0904765Z hint:
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0905760Z hint: 	git config --global init.defaultBranch <name>
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0906879Z hint:
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0907865Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0909359Z hint: 'development'. The just-created branch can be renamed via this command:
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0910810Z hint:
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0911609Z hint: 	git branch -m <name>
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0912509Z hint:
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0913660Z hint: Disable this message with "git config set advice.defaultBranchName false"
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0915544Z Initialized empty Git repository in /home/runner/work/ARKium/ARKium/.git/
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0918842Z [command]/usr/bin/git remote add origin https://github.com/Rae-ARK/ARKium
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0946557Z ##[endgroup]
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0947919Z ##[group]Disabling automatic garbage collection
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0951470Z [command]/usr/bin/git config --local gc.auto 0
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0990360Z ##[endgroup]
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0991738Z ##[group]Setting up auth
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.0998330Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.1043868Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.1474647Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.1525604Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.1806228Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.1845048Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.2086875Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.2127389Z ##[endgroup]
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.2128209Z ##[group]Fetching the repository
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.2137007Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1350cf03129ed2a2c891c9b98d005a26870c026b:refs/remotes/origin/main
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7560427Z From https://github.com/Rae-ARK/ARKium
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7562485Z  * [new ref]         1350cf03129ed2a2c891c9b98d005a26870c026b -> origin/main
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7596123Z ##[endgroup]
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7597503Z ##[group]Determining the checkout info
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7599080Z ##[endgroup]
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7607607Z [command]/usr/bin/git sparse-checkout disable
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7661776Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7701211Z ##[group]Checking out the ref
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7705807Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7860243Z Switched to a new branch 'main'
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7862398Z branch 'main' set up to track 'origin/main'.
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7869536Z ##[endgroup]
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7913248Z [command]/usr/bin/git log -1 --format=%H
+svelte	Run actions/checkout@v4	2026-07-30T19:21:00.7941436Z 1350cf03129ed2a2c891c9b98d005a26870c026b
+svelte	Run actions/setup-node@v4	﻿2026-07-30T19:21:00.8308194Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.8314498Z ##[group]Run actions/setup-node@v4
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.8315588Z with:
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.8316389Z   node-version: 22
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.8317248Z   cache: npm
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.8318088Z   always-auth: false
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.8318991Z   check-latest: false
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.8328352Z   token: ***
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.8329188Z ##[endgroup]
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.9850473Z Found in cache @ /opt/hostedtoolcache/node/22.23.1/x64
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.9855502Z (node:2176) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.9860352Z (Use `node --trace-deprecation ...` to show where the warning was created)
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:00.9865039Z ##[group]Environment details
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:01.9713466Z node: v22.23.1
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:01.9714169Z npm: 10.9.8
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:01.9714671Z yarn: 1.22.22
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:01.9716140Z ##[endgroup]
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:01.9763959Z [command]/opt/hostedtoolcache/node/22.23.1/x64/bin/npm config get cache
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:02.0820509Z /home/runner/.npm
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:02.1793619Z Cache hit for: node-cache-Linux-x64-npm-550075d7005552f0bed3ec3a8962f8b3883580c55780572614dd050aaf3195ed
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:02.1895200Z (node:2176) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:02.5274504Z Received 43573107 of 43573107 (100.0%), 141.8 MBs/sec
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:02.5275438Z Cache Size: ~42 MB (43573107 B)
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:02.5301808Z [command]/usr/bin/tar -xf /home/runner/work/_temp/df896c18-c0b3-49ea-8b74-a92b0e20650a/cache.tzst -P -C /home/runner/work/ARKium/ARKium --use-compress-program unzstd
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:02.6522402Z Cache restored successfully
+svelte	Run actions/setup-node@v4	2026-07-30T19:21:02.6547870Z Cache restored from key: node-cache-Linux-x64-npm-550075d7005552f0bed3ec3a8962f8b3883580c55780572614dd050aaf3195ed
+svelte	Run npm ci	﻿2026-07-30T19:21:02.6755792Z ##[group]Run npm ci
+svelte	Run npm ci	2026-07-30T19:21:02.6756115Z [36;1mnpm ci[0m
+svelte	Run npm ci	2026-07-30T19:21:02.6815500Z shell: /usr/bin/bash -e {0}
+svelte	Run npm ci	2026-07-30T19:21:02.6815815Z ##[endgroup]
+svelte	Run npm ci	2026-07-30T19:21:05.4376212Z 
+svelte	Run npm ci	2026-07-30T19:21:05.4384073Z > arkium@0.0.1 prepare
+svelte	Run npm ci	2026-07-30T19:21:05.4384574Z > svelte-kit sync || echo ''
+svelte	Run npm ci	2026-07-30T19:21:05.4384777Z 
+svelte	Run npm ci	2026-07-30T19:21:06.4247662Z 
+svelte	Run npm ci	2026-07-30T19:21:06.4248663Z added 275 packages, and audited 276 packages in 4s
+svelte	Run npm ci	2026-07-30T19:21:06.4249193Z 
+svelte	Run npm ci	2026-07-30T19:21:06.4261653Z 73 packages are looking for funding
+svelte	Run npm ci	2026-07-30T19:21:06.4262341Z   run `npm fund` for details
+svelte	Run npm ci	2026-07-30T19:21:06.4356953Z 
+svelte	Run npm ci	2026-07-30T19:21:06.4357496Z 3 low severity vulnerabilities
+svelte	Run npm ci	2026-07-30T19:21:06.4357834Z 
+svelte	Run npm ci	2026-07-30T19:21:06.4358387Z To address all issues (including breaking changes), run:
+svelte	Run npm ci	2026-07-30T19:21:06.4359131Z   npm audit fix --force
+svelte	Run npm ci	2026-07-30T19:21:06.4359514Z 
+svelte	Run npm ci	2026-07-30T19:21:06.4359951Z Run `npm audit` for details.
+svelte	Run npm run lint	﻿2026-07-30T19:21:06.4968331Z ##[group]Run npm run lint
+svelte	Run npm run lint	2026-07-30T19:21:06.4968636Z [36;1mnpm run lint[0m
+svelte	Run npm run lint	2026-07-30T19:21:06.5019230Z shell: /usr/bin/bash -e {0}
+svelte	Run npm run lint	2026-07-30T19:21:06.5019515Z ##[endgroup]
+svelte	Run npm run lint	2026-07-30T19:21:06.6024469Z 
+svelte	Run npm run lint	2026-07-30T19:21:06.6025166Z > arkium@0.0.1 lint
+svelte	Run npm run lint	2026-07-30T19:21:06.6025627Z > prettier --check . && eslint .
+svelte	Run npm run lint	2026-07-30T19:21:06.6025833Z 
+svelte	Run npm run lint	2026-07-30T19:21:06.6881631Z Checking formatting...
+svelte	Run npm run lint	2026-07-30T19:21:06.8326900Z [[33mwarn[39m] .github/workflows/ci.yml
+svelte	Run npm run lint	2026-07-30T19:21:07.6333861Z [[33mwarn[39m] Code style issues found in the above file. Run Prettier with --write to fix.
+svelte	Run npm run lint	2026-07-30T19:21:07.6888726Z ##[error]Process completed with exit code 1.
+svelte	Post Run actions/checkout@v4	﻿2026-07-30T19:21:07.7042308Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.7043682Z Post job cleanup.
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.7964849Z [command]/usr/bin/git version
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8027921Z git version 2.54.0
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8076849Z Temporarily overriding HOME='/home/runner/work/_temp/b794a13c-c280-4322-b546-1bcf7a4e09db' before making global git config changes
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8078495Z Adding repository directory to the temporary git global config as a safe directory
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8084976Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ARKium/ARKium
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8132714Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8177629Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8519340Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8554094Z http.https://github.com/.extraheader
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8575964Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.8608791Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.9025427Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+svelte	Post Run actions/checkout@v4	2026-07-30T19:21:07.9119712Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+svelte	Complete job	﻿2026-07-30T19:21:07.9763733Z Cleaning up orphan processes
+svelte	Complete job	2026-07-30T19:21:08.0124951Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
