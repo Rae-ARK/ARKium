@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ARKium</string>
+    <string name="title_activity_main">ARKium</string>
+    <string name="package_name">com.raeark.arkium</string>
+    <string name="custom_url_scheme">com.raeark.arkium</string>
+</resources>

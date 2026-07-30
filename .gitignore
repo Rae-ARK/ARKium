@@ -1,0 +1,16 @@
+node_modules/
+.svelte-kit/
+build/
+dist/
+
+android/.gradle/
+android/build/
+android/app/build/
+
+.env
+.env.*
+
+.idea/
+.vscode/*.log
+
+.DS_Store

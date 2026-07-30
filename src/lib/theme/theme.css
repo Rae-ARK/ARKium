@@ -1,0 +1,45 @@
+:root {
+	--background: #ffffff;
+	--surface: #f5f5f5;
+	--text: #1a1a1a;
+	--text-secondary: #666666;
+	--accent: #6750a4;
+}
+
+[data-theme='dark'] {
+	--background: #1c1b1f;
+	--surface: #242326;
+	--text: #e6e1e5;
+	--text-secondary: #cac4d0;
+	--accent: #d0bcff;
+}
+
+[data-theme='paper'] {
+	--background: #f4ecd8;
+	--surface: #fff8e7;
+	--text: #3b2f2f;
+	--text-secondary: #6b5b4b;
+	--accent: #8b5e3c;
+}
+
+html {
+	background: var(--background);
+}
+
+body {
+	background: var(--background);
+	color: var(--text);
+	margin: 0;
+	font-family: system-ui, sans-serif;
+}
+
+nav,
+header,
+section,
+button,
+main {
+	transition:
+		background-color 200ms ease,
+		color 200ms ease,
+		border-color 200ms ease;
+}
