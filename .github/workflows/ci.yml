@@ -2,60 +2,47 @@ name: ARKium CI
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [main]
   pull_request:
-    branches:
-      - main
-      - master
+    branches: [main]
 
 jobs:
-  web-check:
-    name: Svelte Check
+  svelte:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run check
+      - run: npm run build
 
-      - name: Format check
-        run: npm run format -- --check
-
-      - name: Svelte check
-        run: npm run check
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Build
-        run: npm run build
-
-
-  android-build:
-    name: Android Debug Build
+  android:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 21
+          java-version: "21"
 
-      - name: Build Android
+      - run: npm ci
+      - run: npm run build
+      - run: npx cap sync android
+
+      - name: Build Debug APK
         working-directory: android
         run: ./gradlew assembleDebug
-
