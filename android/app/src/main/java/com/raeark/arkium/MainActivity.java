@@ -1,5 +1,15 @@
 package com.raeark.arkium;
 
-import com.getcapacitor.BridgeActivity;
+import android.os.Bundle;
 
-public class MainActivity extends BridgeActivity {}
+import com.getcapacitor.BridgeActivity;
+import com.raeark.arkium.plugins.FileProviderPlugin;
+
+public class MainActivity extends BridgeActivity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        registerPlugin(FileProviderPlugin.class);
+        super.onCreate(savedInstanceState);
+    }
+}
