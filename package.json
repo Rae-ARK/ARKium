@@ -45,6 +45,7 @@
 	"dependencies": {
 		"@capacitor/android": "^8.4.2",
 		"@capacitor/core": "^8.4.2",
+		"@capacitor/filesystem": "^8.1.2",
 		"@lucide/svelte": "^1.28.0",
 		"bits-ui": "^2.18.1",
 		"clsx": "^2.1.1",

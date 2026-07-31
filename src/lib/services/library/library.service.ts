@@ -1,15 +1,25 @@
 import type { LibraryEntry } from '$lib/models';
 import { storageService } from '$lib/services/storage';
 
-const LIBRARY_PATH = '/data/metadata.json';
-
 export class LibraryService {
 	async load(): Promise<LibraryEntry[]> {
-		return (await storageService.readJson<LibraryEntry[]>(LIBRARY_PATH)) ?? [];
+		return (await storageService.loadLibrary<LibraryEntry[]>()) ?? [];
 	}
 
 	async save(items: LibraryEntry[]): Promise<void> {
-		await storageService.writeJson(LIBRARY_PATH, items);
+		await storageService.saveLibrary(items);
+	}
+
+	async add(item: LibraryEntry, items: LibraryEntry[]): Promise<LibraryEntry[]> {
+		const updated = [...items, item];
+		await this.save(updated);
+		return updated;
+	}
+
+	async remove(id: string, items: LibraryEntry[]): Promise<LibraryEntry[]> {
+		const updated = items.filter((entry) => entry.id !== id);
+		await this.save(updated);
+		return updated;
 	}
 }
 

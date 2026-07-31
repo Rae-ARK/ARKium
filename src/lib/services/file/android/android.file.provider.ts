@@ -1,9 +1,6 @@
 import { Capacitor } from '@capacitor/core';
-
 import { FileProviderNative } from './file.provider.plugin';
-
-import type { FileProvider } from '../file.types';
-import type { FolderPermission } from '../file.types';
+import type { FileProvider, FileEntry, FolderPermission } from '../file.types';
 
 class AndroidFileProvider implements FileProvider {
 	async pickFolder(): Promise<FolderPermission> {
@@ -20,24 +17,28 @@ class AndroidFileProvider implements FileProvider {
 		};
 	}
 
-	async listFiles(folderId: string): Promise<never> {
+	async listFiles(folderId: string): Promise<FileEntry[]> {
 		if (!Capacitor.isNativePlatform()) {
 			throw new Error('Android FileProvider requires native platform');
 		}
 
-		void folderId;
+		const result = await FileProviderNative.listFiles({ folderId });
 
-		throw new Error('Android SAF not implemented');
+		return result.files.map((file) => ({
+			name: file.name,
+			path: file.path,
+			type: file.type,
+			size: file.size
+		}));
 	}
 
-	async readFile(path: string): Promise<never> {
+	async readFile(path: string): Promise<string> {
 		if (!Capacitor.isNativePlatform()) {
 			throw new Error('Android FileProvider requires native platform');
 		}
 
-		void path;
-
-		throw new Error('Android SAF not implemented');
+		const result = await FileProviderNative.readFile({ path });
+		return result.content;
 	}
 }
 
