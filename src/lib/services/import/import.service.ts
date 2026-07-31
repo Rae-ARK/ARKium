@@ -11,7 +11,7 @@ export class ImportService {
 			title: folder.name,
 			path: folder.id,
 			progress: 0,
-                        addedAt: new Date().toISOString()
+			addedAt: new Date().toISOString()
 		};
 
 		library.set([entry]);

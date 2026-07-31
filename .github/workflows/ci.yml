@@ -46,5 +46,3 @@ jobs:
       - name: Build Debug APK
         working-directory: android
         run: ./gradlew assembleDebug
-      
-      

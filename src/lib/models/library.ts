@@ -5,7 +5,7 @@ export interface LibraryEntry {
 	path: string;
 	lastRead?: number;
 	progress?: number;
-        addedAt: string;
+	addedAt: string;
 }
 
 export type Library = LibraryEntry[];

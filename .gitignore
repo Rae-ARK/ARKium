@@ -6,6 +6,7 @@ dist/
 android/.gradle/
 android/build/
 android/app/build/
+android/app/src/main/assets/
 
 .env
 .env.*
@@ -14,3 +15,4 @@ android/app/build/
 .vscode/*.log
 
 .DS_Store
+android/app/src/main/assets/public/

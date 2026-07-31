@@ -13,15 +13,13 @@
 
 <h1>Import</h1>
 
-<button onclick={chooseFolder}>
-	Choose Library Folder
-</button>
+<button onclick={chooseFolder}> Choose Library Folder </button>
 
 {#if library.items.length}
 	<h2>Selected</h2>
 
 	<ul>
-		{#each library.items as item}
+		{#each library.items as item (item.id)}
 			<li>{item.path}</li>
 		{/each}
 	</ul>

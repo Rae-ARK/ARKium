@@ -3,7 +3,7 @@
 	import '$lib/theme/reset.css';
 	import '$lib/theme/theme.css';
 	import TopAppBar from '$lib/components/layout/TopAppBar.svelte';
-    import BottomNavigation from '$lib/components/navigation/BottomNavigation.svelte';
+	import BottomNavigation from '$lib/components/navigation/BottomNavigation.svelte';
 
 	let { children } = $props();
 
@@ -45,10 +45,9 @@
 
 <style>
 	.content {
-	    padding: 20px;
-	    padding-bottom: 90px;
+		padding: 20px;
+		padding-bottom: 90px;
 
-	    min-height: calc(100vh - 64px);
-    }
+		min-height: calc(100vh - 64px);
+	}
 </style>
-
