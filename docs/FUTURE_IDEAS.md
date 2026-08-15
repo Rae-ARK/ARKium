@@ -1,7 +1,6 @@
 # Future Ideas (unscheduled, not committed to any version)
 
-Ideas discussed and deliberately deferred, so they survive even if the
-conversation that produced them doesn't. Nothing here is a spec — just
+Ideas discussed and deliberately deferred. Nothing here is a spec — just
 a memory aid for "we thought about this, here's the shape of it."
 
 ## v2: LAN Sync ("iTunes for novels")
@@ -51,3 +50,24 @@ validation) → Focused → Immersive. Multi-pane specifically needs
 prototyping before it's trusted as anything more than an experiment —
 discoverability, trackpad behavior, and keyboard/screen-reader parity
 are all unresolved.
+
+### Lifecycle refinement: two-tier wake, user's choice on background scope
+
+Two-tier pattern, similar in spirit to systemd socket activation /
+inetd: a near-zero-footprint listener (mDNS advertise + handshake
+ping) stays up cheaply; the real sync backend (Node extension running
+an HTTP server) only spawns on an actual sync request, then
+self-terminates after an idle timeout.
+
+**Deliberately deferred, not decided:** whether Tier 1 needs to
+survive when the ARKium window is closed (OS-level autostart/tray
+process, so a phone can wake it without the desktop app visibly open)
+vs. only running while the app is open.
+
+**Resolution: make it a setting, not an architectural default.**
+Some users are fine opening the app before a sync; others want
+always-available background sync. Ship "runs while app is open" as
+the simpler default, expose "run in background / start on login" as
+an opt-in toggle for people who want it. Avoids forcing a
+tray-icon/autostart footprint on everyone just to support the subset
+who want zero-friction background sync.
