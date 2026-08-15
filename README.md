@@ -13,4 +13,4 @@ The desktop sibling to [**ARKster**](https://github.com/Rae-ARK/ARKster) — a l
 See [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md).
 
 ## License
-See [LICENSE](LICENSE).
+See [GPLv3 LICENSE](LICENSE).
