@@ -16,3 +16,23 @@ ARKium is intended to share design language and core concepts (BookSource-style 
 
 ## Status
 Early scaffold stage. Vue 3 + Vite frontend initialized, Neutralino client lib installed. Native shell wiring and first working window in progress.
+
+## Relationship to ARKster — Sibling, Not a Fork
+
+ARKster (Android) and ARKium (Desktop) are **separate repos on purpose**. Different interaction models, different resource budgets, different filesystem access patterns — a stretched mobile UI on desktop (or vice versa) is worse than either done natively. They share the underlying novel/library *concepts* (arcs, chapters, reading progress, folder-based sources), not a UI or a codebase.
+
+> Android: "I want to read something."
+> Desktop: "I want to manage and read my entire library."
+
+## Reading Modes (design notes, not locked spec)
+
+Early idea worth prototyping once a basic window is running — desktop has room for a genuinely spatial reader instead of a tall mobile page:
+
+- **Flow** — default. Single-column vertical reading, works everywhere, no learning curve.
+- **Multi-pane (opt-in)** — chapters as side-by-side containers (≈2 on 16:9, ≈3 on ultrawide via intrinsic CSS `grid-template-columns: repeat(auto-fit, minmax(...))`, not hard breakpoints). Chapter under the cursor receives scroll focus.
+- **Focused** — one chapter, generous margins, comfortable typography.
+- **Immersive** — minimal/hidden chrome.
+
+Multi-pane hover-scroll is **not the default** — it's a novel interaction pattern with real discoverability, trackpad, and accessibility risk (keyboard-only/screen-reader users need a fully parallel focus model). Ship Flow first, validate multi-pane as an opt-in mode once real usage data exists.
+
+Text width should stay comfortable regardless of viewport — extra horizontal space adds more chapter columns, not longer lines.
