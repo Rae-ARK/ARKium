@@ -1,5 +1,16 @@
-# Vue 3 + TypeScript + Vite
+# ARKium
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The desktop sibling to [**ARKster**](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for your own folder of novel `.txt`/`.md` files. No accounts, no cloud sync, no Play Store or app store dependency.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Stack
+- [Neutralino.js](https://neutralino.js.org/) — lightweight native shell (no Electron/Chromium bundling)
+- Vue 3 + TypeScript + Vite
+
+## Status
+🚧 Early rebuild — previous SvelteKit/Capacitor attempt scrapped in favor of this stack. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for design details.
+
+## Getting started
+See [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md).
+
+## License
+See [LICENSE](LICENSE).
