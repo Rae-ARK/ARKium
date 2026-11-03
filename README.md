@@ -10,7 +10,9 @@ The desktop sibling to [**ARKster**](https://github.com/Rae-ARK/ARKster) — a l
 | **ARKium** (this repo) | Desktop | Anyone with a folder of novels |
 | [ARKarium](https://github.com/Rae-ARK/arkarium) | Android | Readers of Rae ARK's own novels |
 
-ARKster and ARKium are general-purpose readers for your own files. ARKarium is a separate app for people who read Rae ARK's novels specifically; it handles delivering those novels to readers, which is deliberately not ARKium's job. See [`docs/ANDROID_REFERENCE.md`](docs/ANDROID_REFERENCE.md) for how the three compare.
+ARKster and ARKium are general-purpose readers for your own files. ARKarium is a separate app for people who read Rae ARK's novels specifically; it handles delivering those novels to readers, and that distribution job stays ARKarium's, not ARKium's.
+
+What *is* planned for ARKium is the other half of the relationship: desktop as the full library, phone as a curated offline subset — the iTunes-for-an-iPod role, for both Android siblings. Since ARKarium carries over ARKster's storage model and folder conventions, a backup/sync channel built for ARKster's library shape works for ARKarium's too, without ARKium needing to know which app put the files there. **This is a planned direction, not a current feature** — see [`docs/FUTURE_IDEAS.md`](docs/FUTURE_IDEAS.md#v2-lan-sync-itunes-for-novels) for the design sketch. See [`docs/ANDROID_REFERENCE.md`](docs/ANDROID_REFERENCE.md) for how the three compare today.
 
 ## Stack
 - C (C11)

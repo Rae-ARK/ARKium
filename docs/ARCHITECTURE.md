@@ -3,7 +3,7 @@
 ## Overview
 ARKium is the desktop sibling to [ARKster](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for anyone's folder of novel `.txt`/`.md` files. Where ARKster is Android/Kotlin/Compose, ARKium targets desktop (Windows/Linux/macOS) with a lightweight, non-Electron stack.
 
-Both are part of a three-app ecosystem. ARKster and ARKium are the general-purpose readers. The third app, ARKarium (`Rae-ARK/arkarium`, Android), is for readers of Rae ARK's own novels. See [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md).
+Both are part of a three-app ecosystem. ARKster and ARKium are the general-purpose readers. The third app, ARKarium (`Rae-ARK/arkarium`, Android), is for readers of Rae ARK's own novels. ARKium is also planned as the sync/backup hub for both Android apps — the desktop side of an "iTunes for novels" relationship (full library on desktop, curated subset on the phone), not yet built. See [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md).
 
 ## Stack
 - **Language**: C (C11).
@@ -38,9 +38,10 @@ The three apps have different audiences, and that decides scope:
 
 What follows for ARKium:
 
-- Author-to-reader features are **out of scope** here: relay sync, the fiction-name lookup, new-chapter notifications, and character-aware TTS. They belong to ARKarium.
-- ARKarium's idea doc mentions a possible desktop client derived from ARKium. If that is ever built it would be its own app; ARKium itself does not grow author-specific features for it.
-- The **folder format is the common ground** across all three. ARKarium's sync writes ordinary files into a library folder and then runs the normal folder scan, so keeping ARKium's scanner in step with the Android scanners keeps all three interoperable.
+- Author-to-reader features stay **out of scope** here: relay sync, the fiction-name lookup, new-chapter notifications, and character-aware TTS. They belong to ARKarium and don't get reimplemented in ARKium.
+- **ARKium's own sync role is not limited to ARKster, though.** The planned "iTunes for novels" LAN sync (see [`FUTURE_IDEAS.md`](FUTURE_IDEAS.md#v2-lan-sync-itunes-for-novels)) is a desktop-to-phone *backup/storage* relationship, not an author-distribution one — so it targets both Android siblings, not just ARKster. Because ARKarium carries over ARKster's scanner, data model and folder conventions (see `ANDROID_REFERENCE.md`), a library ARKarium already synced from the author's relay is, on disk, the same shape as one ARKster built from a hand-assembled folder. ARKium doesn't need to know or care which app put the files there to back them up or hand a subset back. This is planned, not built.
+- ARKarium's own idea doc lists a planned "ARKium-derived" desktop client as part of *its* ecosystem. That's ARKarium's aspiration for its own future app, not a commitment on ARKium's side — ARKium does not grow Rae-ARK-specific distribution features to become that client. The sync/backup relationship above is the actual, general-purpose connection planned between the two today.
+- The **folder format is the common ground** across all three. ARKarium's sync writes ordinary files into a library folder and then runs the normal folder scan, so keeping ARKium's scanner in step with the Android scanners keeps all three interoperable — and is also what makes the backup/sync relationship above tractable at all.
 - **Licensing:** ARKium and ARKster are GPLv3, ARKarium is proprietary. Ideas and conventions can be adopted freely. Anything ported as code into ARKium becomes GPLv3, so that should be a deliberate choice, not an accident.
 
 ## Status

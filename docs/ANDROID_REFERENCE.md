@@ -19,7 +19,9 @@ A snapshot of what the two Android codebases do, taken so ARKium can borrow idea
 | Tests | None found | Scanner, theme, settings view-model | None |
 | Read-event stats (streak, weekly count) | No | Yes | No |
 
-ARKster and ARKium are the general readers. ARKarium is a separate app for readers of Rae ARK's novels; its README describes it as built around direct distribution from the author to the reader. ARKarium's own docs say its scanner logic (sort tiers, rescan safety, author pages) was carried over from ARKster. Its idea doc also mentions a possible desktop client derived from ARKium; that would be its own app. ARKium's scope follows from this; see [`ARCHITECTURE.md`](ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader).
+ARKster and ARKium are the general readers. ARKarium is a separate app for readers of Rae ARK's novels; its README describes it as built around direct distribution from the author to the reader. ARKarium's own docs say its scanner logic (sort tiers, rescan safety, author pages) was carried over from ARKster. Its idea doc also mentions a possible desktop client derived from ARKium — that's ARKarium's own future aspiration, not something ARKium commits to becoming. ARKium's scope conclusion (no author-distribution features) follows from this; see [`ARCHITECTURE.md`](ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader).
+
+That conclusion is about ARKarium's *relay* sync specifically (author → reader). It does not rule out ARKium acting as a sync/backup hub for either Android app's *existing* library — see [`FUTURE_IDEAS.md`](FUTURE_IDEAS.md#v2-lan-sync-itunes-for-novels). Worth being blunt about: none of that exists yet, and neither does much of what the Android apps' own docs plan for themselves. As of this snapshot: ARKster's README states it has no syncing at all; ARKarium's own planning docs (`docs/arkarium/FUTURE_PLANS.md`) list its stated "killer feature," character-aware TTS, as having no code anywhere in `app/src`, and multi-relay fallback / background sync / auth are all "explicitly punted" in its sync design doc. Treat everything below as a snapshot of two early, actively-shifting codebases, not a stable target.
 
 ## Folder conventions: Android vs ARKium
 
@@ -88,7 +90,7 @@ ARKium's reader already uses 18px as its fixed default, which matches Android's 
 
 These serve ARKarium's purpose (delivering one author's novels to his readers) and are **out of scope for ARKium**. They are listed for reference, and because a few ideas might translate to a general reader.
 
-- **Sync:** fetch a manifest, diff SHA-256 hashes, download only changed files, delete stale ones, then run the normal folder scan. Single fixed relay, resolved from a fiction name. Multi-relay fallback, auth and background sync are designed but not built. Known robustness issues are listed in ARKarium's `docs/arkarium/NEXT_FIXES.md`.
+- **Relay sync:** fetch a manifest, diff SHA-256 hashes, download only changed files, delete stale ones, then run the normal folder scan. Single fixed relay, resolved from a fiction name. Multi-relay fallback, auth and background sync are designed but not built. Known robustness issues are listed in ARKarium's `docs/arkarium/NEXT_FIXES.md`. (This is the author→reader mechanism specifically — ARKium's own planned desktop↔phone *backup* sync, in `FUTURE_IDEAS.md`, is a different feature and targets ARKarium's library too, not just ARKster's.)
 - **New-chapter notifications:** a background worker that checks synced novels.
 - **Text-to-speech:** described in ARKarium's docs as the intended flagship feature, with character-aware multi-voice reading planned. Per its docs this is in progress, not finished.
 - **Because the content format is plain files**, much of this stays compatible with ARKium's folder model if ARKium ever wants to consume it.

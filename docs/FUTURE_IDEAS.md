@@ -7,12 +7,28 @@ a memory aid for "we thought about this, here's the shape of it."
 
 **Problem it solves:** people hoard novels; mobile storage fills up;
 desktop storage is cheap. Let desktop be the full library, let mobile
-hold a curated offline subset.
+hold a curated offline subset. This applies to **both** Android
+siblings, not just ARKster: ARKarium carries over ARKster's storage
+and folder model (see `ANDROID_REFERENCE.md`), so a novel ARKarium
+pulled from the author's relay sits on disk the same way one ARKster
+indexed from a hand-assembled folder does. ARKium doesn't need a
+separate code path per app — it's the same backup/sync target either
+way, and a library built or synced on either phone app can be backed
+up to desktop and restored from it.
 
 **Core idea:** ARKium (desktop) can optionally run a local HTTP server,
 LAN-only, no cloud, no accounts — same trust model as the rest of the
-project. ARKster (mobile) discovers it and pulls what the user wants
-to have offline.
+project. ARKster and ARKarium (mobile) discover it and pull what the
+user wants to have offline, or push a library up to desktop as a
+backup.
+
+**Status reality check:** neither Android app supports this today.
+ARKster's own README says "no accounts, no syncing" as of v0.2.
+ARKarium has a *different* sync (author-to-reader, via its relay) but
+nothing resembling a phone-to-desktop backup channel, and its own
+planning docs list its stated flagship feature (character-aware TTS)
+as entirely unbuilt — so treat "the Android side of this ecosystem" as
+early and the plan below as a direction, not a schedule.
 
 **Open questions to resolve when this is actually scheduled:**
 
@@ -75,9 +91,9 @@ who want zero-friction background sync.
 
 ## Relation to ARKarium's sync
 
-The LAN-sync idea above is between two general-purpose readers, ARKium and ARKster. That still holds as written.
+The LAN-sync idea above now targets **both** Android siblings, ARKium↔ARKster and ARKium↔ARKarium — see the status note above for why that's one feature, not two.
 
-ARKarium has a different, already-working sync: it fetches a manifest from the author's relay, diffs SHA-256 hashes, downloads only what changed, then runs the normal folder scan. It is author-to-reader (content flows from a publisher to people reading that author's novels), where LAN sync is desktop-to-phone (content flows between one person's own devices). It is ARKarium's feature and out of scope for ARKium (see [`ARCHITECTURE.md`](ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader)).
+ARKarium separately has its own, already-working sync: it fetches a manifest from the author's relay, diffs SHA-256 hashes, downloads only what changed, then runs the normal folder scan. That one is author-to-reader (content flows from a publisher to people reading that author's novels), where LAN sync is desktop-to-phone (content flows between one person's own devices, as a backup). The two are complementary, not the same feature: ARKarium keeps doing its own relay sync to *get* an author's novels in the first place; ARKium's LAN sync is about *backing up and offloading* whatever is already in a phone's library, regardless of how it got there. The relay-sync mechanism itself (manifest/hash-diff from a publisher) stays ARKarium's feature and out of scope for ARKium (see [`ARCHITECTURE.md`](ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader)).
 
 Worth remembering for LAN sync:
 - Both approaches lean on the same property: the on-disk format is plain files in a shared folder shape, so syncing is file copying. That is another reason to keep ARKium's scanner in step with the Android scanners.

@@ -53,3 +53,5 @@ ARKium is a general-purpose reader (see [`ARCHITECTURE.md`](ARCHITECTURE.md#deci
 - Relay sync (manifest + hash diff) and the fiction-name lookup
 - New-chapter notifications
 - Character-aware, multi-voice text-to-speech
+
+**Not out of scope, but not yet scheduled:** acting as the sync/backup hub for both ARKster and ARKarium's libraries — the "iTunes for novels" idea in [`FUTURE_IDEAS.md`](FUTURE_IDEAS.md#v2-lan-sync-itunes-for-novels). That's a desktop-to-phone backup relationship, distinct from the relay sync above, and nothing in either Android app supports it yet either (see [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md) for current status on both).
