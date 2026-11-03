@@ -120,7 +120,7 @@ arkium_fiction_page_new(ArkiumAppContext *ctx, ArkiumNovel *novel) {
     if (chapter->arc) {
       adw_action_row_set_subtitle(row, chapter->arc);
     }
-    adw_action_row_set_activatable(row, TRUE);
+    gtk_list_box_row_set_activatable(GTK_LIST_BOX_ROW(row), TRUE);
     GtkWidget *chevron = gtk_image_new_from_icon_name("go-next-symbolic");
     adw_action_row_add_suffix(row, chevron);
     gtk_list_box_append(GTK_LIST_BOX(listbox), GTK_WIDGET(row));

@@ -1,4 +1,4 @@
-#include <gtk/gtk.h>
+#include <adwaita.h>
 
 #include "window.h"
 
@@ -18,19 +18,19 @@ load_css(void) {
 }
 
 static void
-on_activate(GtkApplication *app, gpointer user_data) {
+on_activate(GApplication *app, gpointer user_data) {
   (void)user_data;
 
   load_css();
 
-  ArkiumWindow *window = arkium_window_new(app);
+  ArkiumWindow *window = arkium_window_new(ADW_APPLICATION(app));
   gtk_window_present(GTK_WINDOW(window));
 }
 
 int
 main(int argc, char *argv[]) {
-  g_autoptr(GtkApplication) app =
-      gtk_application_new(ARKIUM_APP_ID, G_APPLICATION_DEFAULT_FLAGS);
+  g_autoptr(AdwApplication) app =
+      adw_application_new(ARKIUM_APP_ID, G_APPLICATION_DEFAULT_FLAGS);
 
   g_signal_connect(app, "activate", G_CALLBACK(on_activate), NULL);
 

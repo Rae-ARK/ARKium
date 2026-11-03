@@ -1,58 +1,27 @@
 /*
  * ARKium GTK theme overrides.
  *
- * Carries forward the accent palette from the old web scaffold's
- * src/style.css (:root custom properties -> @define-color). GTK has
- * no prefers-color-scheme media query, so the window gets a "dark"
- * style class in code (see window.c) whenever
- * gtk-application-prefer-dark-theme is on, and the rules below key
- * off that class the same way the old CSS keyed off the media query.
+ * Accent palette carried forward from the old web scaffold.
+ * libadwaita handles light/dark itself, so no manual "dark" class.
  */
 
 @define-color arkium_accent #aa3bff;
-@define-color arkium_accent_bg alpha(#aa3bff, 0.1);
-@define-color arkium_accent_border alpha(#aa3bff, 0.5);
-
 @define-color arkium_accent_dark #c084fc;
-@define-color arkium_accent_bg_dark alpha(#c084fc, 0.15);
-@define-color arkium_accent_border_dark alpha(#c084fc, 0.5);
 
-.arkium-heading {
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: -0.3px;
+/* Reader (Chapter Page). Typography first: see docs/UI_SCREENS.md §3.
+ * Reader preferences (font, size, width) are a later release; these are
+ * the fixed defaults they will override. */
+textview.arkium-reader {
+  font-size: 18px;
+  background: transparent;
+  color: @window_fg_color;
 }
 
-.arkium-center {
-  padding: 32px;
+textview.arkium-reader text {
+  background: transparent;
+  color: @window_fg_color;
 }
 
-.arkium-counter {
-  font-family: monospace;
-  font-size: 15px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  color: @arkium_accent;
-  background-color: @arkium_accent_bg;
-  border: 2px solid transparent;
-  transition: border-color 200ms ease;
-}
-
-.arkium-counter:hover {
-  border-color: @arkium_accent_border;
-}
-
-.arkium-counter:focus {
-  outline-color: @arkium_accent;
-}
-
-window.dark .arkium-counter {
-  color: @arkium_accent_dark;
-  background-color: @arkium_accent_bg_dark;
-}
-
-window.dark .arkium-counter:hover,
-window.dark .arkium-counter:focus {
-  outline-color: @arkium_accent_dark;
-  border-color: @arkium_accent_border_dark;
+.arkium-reader-heading {
+  font-weight: 700;
 }

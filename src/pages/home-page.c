@@ -123,7 +123,7 @@ populate_listbox(HomePageData *data) {
         "%u chapter%s", novel->chapters->len,
         novel->chapters->len == 1 ? "" : "s");
     adw_action_row_set_subtitle(row, subtitle);
-    adw_action_row_set_activatable(row, TRUE);
+    gtk_list_box_row_set_activatable(GTK_LIST_BOX_ROW(row), TRUE);
 
     GtkWidget *chevron = gtk_image_new_from_icon_name("go-next-symbolic");
     adw_action_row_add_suffix(row, chevron);

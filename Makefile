@@ -1,12 +1,15 @@
 PKG_CONFIG ?= pkg-config
 CC ?= cc
 
-PKGS      := gtk4
+PKGS      := gtk4 libadwaita-1 sqlite3
 CFLAGS    += -std=c11 -Wall -Wextra -O2 $(shell $(PKG_CONFIG) --cflags $(PKGS))
 LDLIBS    += $(shell $(PKG_CONFIG) --libs $(PKGS))
 
 BUILD_DIR  := build
-SRC        := src/main.c src/window.c
+SRC        := src/main.c src/window.c src/app-context.c \
+              src/data/novel.c src/data/scanner.c src/data/store.c \
+              src/pages/home-page.c src/pages/fiction-page.c \
+              src/pages/chapter-page.c src/pages/placeholder-page.c
 RESOURCE_C := $(BUILD_DIR)/resources.c
 RESOURCE_XML := data/arkium.gresource.xml
 RESOURCE_DEPS := data/style.css

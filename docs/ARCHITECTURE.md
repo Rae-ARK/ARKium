@@ -16,7 +16,7 @@ GTK/GLib/GIO expose filesystem, OS, and window APIs directly in-process — no l
 ARKium is intended to share design language and core concepts (BookSource-style folder scanning, chapter detection heuristics, reading progress) with ARKster, adapted for desktop file-system conventions and a mouse/keyboard UI. Not a code-shared monorepo (yet) — parallel implementation, aligned UX.
 
 ## Status
-Early scaffold stage. GTK 4 shell initialized with a first working window and build pipeline (see [`GETTING_STARTED.md`](GETTING_STARTED.md)). Library/reader UI (see [`UI_SCREENS.md`](UI_SCREENS.md)) not yet implemented.
+MVP v0.01: libadwaita shell (sidebar + navigation stack), folder scan, SQLite-backed favorites/progress, and basic Home, Fiction and Chapter pages (see [`GETTING_STARTED.md`](GETTING_STARTED.md), [`ROADMAP.md`](ROADMAP.md) and [`UI_SCREENS.md`](UI_SCREENS.md)). Most of the richer UI in the screen spec is not built yet.
 
 ## Relationship to ARKster — Sibling, Not a Fork
 
