@@ -5,7 +5,7 @@
 #include "pages/placeholder-page.h"
 
 /*
- * ArkiumWindow — the application shell (docs/UI_SCREENS.md, "Shared
+ * ArkiumWindow — the application shell (docs/foundation/UI_SCREENS.md, "Shared
  * Desktop Principles": persistent navigation).
  *
  *   AdwNavigationSplitView

@@ -7,7 +7,7 @@ G_BEGIN_DECLS
 /*
  * Scans a library root folder into an ArkiumLibrary.
  *
- * Shape matches docs/ARCHITECTURE.md's "Library Folder Model":
+ * Shape matches docs/foundation/ARCHITECTURE.md's "Library Folder Model":
  * immediate subfolders of root_path are novels; a novel's immediate
  * subfolders (if any) are arcs, each holding chapter files; a novel
  * with no subfolders holds its chapter files directly. Only .txt and

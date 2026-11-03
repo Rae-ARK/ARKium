@@ -10,7 +10,7 @@ G_BEGIN_DECLS
  * Deliberately not GObjects yet: v0.01's Home page is a plain
  * GtkListBox, not a GListModel-backed GtkListView/GtkGridView, so
  * there is nothing today that needs property/signal machinery. See
- * docs/ROADMAP.md v0.02 ("card/grid Home page") for when these
+ * docs/implementation/ROADMAP.md v0.02 ("card/grid Home page") for when these
  * should grow into GObjects backing a GListStore.
  */
 

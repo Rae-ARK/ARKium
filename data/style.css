@@ -8,7 +8,7 @@
 @define-color arkium_accent #aa3bff;
 @define-color arkium_accent_dark #c084fc;
 
-/* Reader (Chapter Page). Typography first: see docs/UI_SCREENS.md §3.
+/* Reader (Chapter Page). Typography first: see docs/foundation/UI_SCREENS.md §3.
  * Reader preferences (font, size, width) are a later release; these are
  * the fixed defaults they will override. */
 textview.arkium-reader {

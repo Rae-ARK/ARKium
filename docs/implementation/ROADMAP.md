@@ -1,6 +1,6 @@
 # Roadmap
 
-Scope is deliberately small per release. [`UI_SCREENS.md`](UI_SCREENS.md) describes the long-term target; this file says what is actually built.
+Scope is deliberately small per release. [`UI_SCREENS.md`](../foundation/UI_SCREENS.md) describes the long-term target; this file says what is actually built.
 
 ## v0.01 — MVP (current)
 Done:
@@ -18,10 +18,10 @@ Known gaps / limitations:
 - Progress is per novel (last chapter + scroll fraction); no per-chapter read state yet
 - No rescan on file changes; reopen the folder to refresh
 - Scanning runs on the main thread (fine for small libraries)
-- Folder-format parity with the Android apps is incomplete: arc folders sort as plain strings, no `~`/`!` sort tiers, lossy text-encoding handling, no covers or metadata files (details in [`ARCHITECTURE.md`](ARCHITECTURE.md#parity-status) and [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md))
+- Folder-format parity with the Android apps is incomplete: arc folders sort as plain strings, no `~`/`!` sort tiers, lossy text-encoding handling, no covers or metadata files (details in [`ARCHITECTURE.md`](../foundation/ARCHITECTURE.md#parity-status) and [`ANDROID_REFERENCE.md`](../foundation/ANDROID_REFERENCE.md))
 
 ## v0.02 — Parity and library feel
-Proposed order; cheapest and most correctness-critical first. Rationale for each item is in [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md).
+Proposed order; cheapest and most correctness-critical first. Rationale for each item is in [`ANDROID_REFERENCE.md`](../foundation/ANDROID_REFERENCE.md).
 
 1. **Scanner parity**
    - numeric arc ordering
@@ -46,12 +46,12 @@ Proposed order; cheapest and most correctness-critical first. Rationale for each
 ## Later
 - Global search (`Ctrl+K`), including chapter titles
 - Manual chapter title/position overrides that survive rescans
-- Ideas parked in [`FUTURE_IDEAS.md`](FUTURE_IDEAS.md)
+- Ideas parked in [`FUTURE_IDEAS.md`](../proposal/FUTURE_IDEAS.md)
 
 ## Out of scope
-ARKium is a general-purpose reader (see [`ARCHITECTURE.md`](ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader)). These belong to ARKarium, the app for readers of Rae ARK's novels, and are not planned here:
+ARKium is a general-purpose reader (see [`ARCHITECTURE.md`](../foundation/ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader)). These belong to ARKarium, the app for readers of Rae ARK's novels, and are not planned here:
 - Relay sync (manifest + hash diff) and the fiction-name lookup
 - New-chapter notifications
 - Character-aware, multi-voice text-to-speech
 
-**Not out of scope, but not yet scheduled:** acting as the sync/backup hub for both ARKster and ARKarium's libraries — the "iTunes for novels" idea in [`FUTURE_IDEAS.md`](FUTURE_IDEAS.md#v2-lan-sync-itunes-for-novels). That's a desktop-to-phone backup relationship, distinct from the relay sync above, and nothing in either Android app supports it yet either (see [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md) for current status on both).
+**Not out of scope, but not yet scheduled:** acting as the sync/backup hub for both ARKster and ARKarium's libraries — the "iTunes for novels" idea in [`FUTURE_IDEAS.md`](../proposal/FUTURE_IDEAS.md#v2-lan-sync-itunes-for-novels). That's a desktop-to-phone backup relationship, distinct from the relay sync above, and nothing in either Android app supports it yet either (see [`ANDROID_REFERENCE.md`](../foundation/ANDROID_REFERENCE.md) for current status on both).

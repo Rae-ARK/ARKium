@@ -3,7 +3,7 @@
 #include <math.h>
 
 /*
- * Chapter Page — the reading environment (docs/UI_SCREENS.md §3).
+ * Chapter Page — the reading environment (docs/foundation/UI_SCREENS.md §3).
  *
  * Previous/Next swap the text inside this same page rather than
  * pushing a new page per chapter, so the navigation stack stays

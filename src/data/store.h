@@ -11,7 +11,7 @@ G_BEGIN_DECLS
  * ~/.local/share/arkium/arkium.db).
  *
  * Novels and chapters are keyed by their absolute filesystem path —
- * matching docs/ARCHITECTURE.md's "read/indexed in place, never
+ * matching docs/foundation/ARCHITECTURE.md's "read/indexed in place, never
  * copied" model, this needs no separate id scheme.
  */
 
