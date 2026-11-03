@@ -72,3 +72,13 @@ the simpler default, expose "run in background / start on login" as
 an opt-in toggle for people who want it. Avoids forcing a
 tray-icon/autostart footprint on everyone just to support the subset
 who want zero-friction background sync.
+
+## Relation to ARKarium's sync
+
+The LAN-sync idea above was written with ARKster as the mobile counterpart. ARKarium (ARKster's successor) now has a different, already-working sync: it fetches a manifest from a single relay, diffs SHA-256 hashes, downloads only what changed, then runs the normal folder scan. It is author-to-reader (content flows from a publisher), where LAN sync is desktop-to-phone (content flows between a person's own devices). They solve different problems and could coexist.
+
+Worth remembering if either is scheduled:
+- Both lean on the same property: the on-disk format is just plain files in a shared folder shape, so syncing is file copying.
+- Reading progress sync (bidirectional, last-write-wins in the sketch above) has no equivalent in ARKarium's sync today.
+- Which of them ARKium implements depends on the open decision in [`ARCHITECTURE.md`](ARCHITECTURE.md#open-decision-what-is-arkium-relative-to-arkarium).
+- Details of the ARKarium design are summarized in [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md).
