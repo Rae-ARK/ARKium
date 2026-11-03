@@ -2,7 +2,15 @@
 
 The desktop sibling to [**ARKster**](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for your own folder of novel `.txt`/`.md` files. No accounts, no cloud sync, no Play Store or app store dependency.
 
-ARKster's Android successor is ARKarium; see [`docs/ANDROID_REFERENCE.md`](docs/ANDROID_REFERENCE.md) for how the three projects compare.
+## The ARK ecosystem
+
+| App | Platform | Who it's for |
+|---|---|---|
+| [ARKster](https://github.com/Rae-ARK/ARKster) | Android | Anyone with a folder of novels |
+| **ARKium** (this repo) | Desktop | Anyone with a folder of novels |
+| [ARKarium](https://github.com/Rae-ARK/arkarium) | Android | Readers of Rae ARK's own novels |
+
+ARKster and ARKium are general-purpose readers for your own files. ARKarium is a separate app for people who read Rae ARK's novels specifically; it handles delivering those novels to readers, which is deliberately not ARKium's job. See [`docs/ANDROID_REFERENCE.md`](docs/ANDROID_REFERENCE.md) for how the three compare.
 
 ## Stack
 - C (C11)

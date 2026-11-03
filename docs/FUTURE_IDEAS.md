@@ -75,10 +75,11 @@ who want zero-friction background sync.
 
 ## Relation to ARKarium's sync
 
-The LAN-sync idea above was written with ARKster as the mobile counterpart. ARKarium (ARKster's successor) now has a different, already-working sync: it fetches a manifest from a single relay, diffs SHA-256 hashes, downloads only what changed, then runs the normal folder scan. It is author-to-reader (content flows from a publisher), where LAN sync is desktop-to-phone (content flows between a person's own devices). They solve different problems and could coexist.
+The LAN-sync idea above is between two general-purpose readers, ARKium and ARKster. That still holds as written.
 
-Worth remembering if either is scheduled:
-- Both lean on the same property: the on-disk format is just plain files in a shared folder shape, so syncing is file copying.
+ARKarium has a different, already-working sync: it fetches a manifest from the author's relay, diffs SHA-256 hashes, downloads only what changed, then runs the normal folder scan. It is author-to-reader (content flows from a publisher to people reading that author's novels), where LAN sync is desktop-to-phone (content flows between one person's own devices). It is ARKarium's feature and out of scope for ARKium (see [`ARCHITECTURE.md`](ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader)).
+
+Worth remembering for LAN sync:
+- Both approaches lean on the same property: the on-disk format is plain files in a shared folder shape, so syncing is file copying. That is another reason to keep ARKium's scanner in step with the Android scanners.
 - Reading progress sync (bidirectional, last-write-wins in the sketch above) has no equivalent in ARKarium's sync today.
-- Which of them ARKium implements depends on the open decision in [`ARCHITECTURE.md`](ARCHITECTURE.md#open-decision-what-is-arkium-relative-to-arkarium).
-- Details of the ARKarium design are summarized in [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md).
+- ARKarium's design is summarized in [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md) if anything in it is useful as prior art for the LAN protocol spec.

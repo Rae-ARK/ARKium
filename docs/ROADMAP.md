@@ -48,5 +48,8 @@ Proposed order; cheapest and most correctness-critical first. Rationale for each
 - Manual chapter title/position overrides that survive rescans
 - Ideas parked in [`FUTURE_IDEAS.md`](FUTURE_IDEAS.md)
 
-## Open decisions
-- **Standalone reader, or desktop client of the ARKarium ecosystem?** Decides whether sync, new-chapter awareness and text-to-speech ever land in ARKium. See [`ARCHITECTURE.md`](ARCHITECTURE.md#open-decision-what-is-arkium-relative-to-arkarium). Nothing in v0.02 to v0.04 depends on the answer.
+## Out of scope
+ARKium is a general-purpose reader (see [`ARCHITECTURE.md`](ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader)). These belong to ARKarium, the app for readers of Rae ARK's novels, and are not planned here:
+- Relay sync (manifest + hash diff) and the fiction-name lookup
+- New-chapter notifications
+- Character-aware, multi-voice text-to-speech

@@ -1,9 +1,9 @@
 # ARKium — Architecture
 
 ## Overview
-ARKium is the desktop sibling to [ARKster](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for folders of novel `.txt`/`.md` files. Where ARKster is Android/Kotlin/Compose, ARKium targets desktop (Windows/Linux/macOS) with a lightweight, non-Electron stack.
+ARKium is the desktop sibling to [ARKster](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for anyone's folder of novel `.txt`/`.md` files. Where ARKster is Android/Kotlin/Compose, ARKium targets desktop (Windows/Linux/macOS) with a lightweight, non-Electron stack.
 
-ARKster's successor, ARKarium (`Rae-ARK/arkarium`), adds author-to-reader sync and is the other Android codebase ARKium is compared against. See [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md).
+Both are part of a three-app ecosystem. ARKster and ARKium are the general-purpose readers. The third app, ARKarium (`Rae-ARK/arkarium`, Android), is for readers of Rae ARK's own novels. See [`ANDROID_REFERENCE.md`](ANDROID_REFERENCE.md).
 
 ## Stack
 - **Language**: C (C11).
@@ -23,22 +23,25 @@ Each `.h` is the public interface of its `.c`; page constructors return `AdwNavi
 ## Why no backend server
 GTK/GLib/GIO expose filesystem, OS, and window APIs directly in-process — no local WebSocket bridge needed, and no separate runtime to spawn. For anything genuinely heavy (large-folder scanning, background indexing), that's a `GTask`/thread-pool job inside the same process rather than a second language or an out-of-process extension.
 
-## Relationship to ARKster and ARKarium — Sibling, Not a Fork
+## Relationship to ARKster and ARKarium — Siblings, Not Forks
 
 ARKster (Android) and ARKium (Desktop) are **separate repos on purpose**. Different interaction models, different resource budgets, different filesystem access patterns — a stretched mobile UI on desktop (or vice versa) is worse than either done natively. They share the underlying novel/library *concepts* (arcs, chapters, reading progress, folder-based sources), not a UI or a codebase. Chapter detection and other heuristics are reimplemented independently in C, not shared as a library.
 
 > Android: "I want to read something."
 > Desktop: "I want to manage and read my entire library."
 
-ARKarium is ARKster's successor on Android. Its idea doc (`docs/arkarium/IDEA.md`) lists the planned clients as Android, a desktop "ARKium-derived client", possibly iOS, and an optional web companion, all consuming the same plain-file content format.
+### Decision: ARKium is a general-purpose reader
+The three apps have different audiences, and that decides scope:
 
-### Open decision: what is ARKium relative to ARKarium?
-Not decided yet. The answer changes what ARKium needs to build:
+- **ARKster (Android) and ARKium (desktop)** are for everyone: point them at a folder of novels and read. Nothing in them is specific to any one author.
+- **ARKarium (Android)** is for people who read Rae ARK's novels specifically. Its job is delivering those novels to readers directly (manifest + hash-diff sync from the author's relay, new-chapter notifications, planned character-aware text-to-speech). It carries over ARKster's scanner and reader logic and adds that layer on top.
 
-- **A. Standalone folder reader** (current scope). Stays a local library manager for a user's own files. Needs only folder-format parity with Android (see below). No sync, no relay.
-- **B. Desktop client of the ARKarium ecosystem.** Additionally needs manifest + hash-diff sync from the relay, new-chapter awareness, and eventually text-to-speech. Much larger scope, and it makes licensing of ported ARKarium code a deliberate choice (ARKarium is proprietary, ARKium is GPLv3).
+What follows for ARKium:
 
-Either way, folder-format parity is the shared first step, because both Android apps already agree on it.
+- Author-to-reader features are **out of scope** here: relay sync, the fiction-name lookup, new-chapter notifications, and character-aware TTS. They belong to ARKarium.
+- ARKarium's idea doc mentions a possible desktop client derived from ARKium. If that is ever built it would be its own app; ARKium itself does not grow author-specific features for it.
+- The **folder format is the common ground** across all three. ARKarium's sync writes ordinary files into a library folder and then runs the normal folder scan, so keeping ARKium's scanner in step with the Android scanners keeps all three interoperable.
+- **Licensing:** ARKium and ARKster are GPLv3, ARKarium is proprietary. Ideas and conventions can be adopted freely. Anything ported as code into ARKium becomes GPLv3, so that should be a deliberate choice, not an accident.
 
 ## Status
 MVP v0.01: libadwaita shell (sidebar + navigation stack), folder scan, SQLite-backed favorites/progress, and basic Home, Fiction and Chapter pages (see [`GETTING_STARTED.md`](GETTING_STARTED.md), [`ROADMAP.md`](ROADMAP.md) and [`UI_SCREENS.md`](UI_SCREENS.md)). Most of the richer UI in the screen spec is not built yet.

@@ -11,14 +11,15 @@ A snapshot of what the two Android codebases do, taken so ARKium can borrow idea
 | | ARKster | ARKarium | ARKium |
 |---|---|---|---|
 | Platform | Android (Kotlin, Compose) | Android (Kotlin, Compose) | Desktop (C, GTK 4, libadwaita) |
-| Role | Local library + reader | Successor to ARKster; author-to-reader distribution | Local library + reader |
+| Audience | Anyone with a folder of novels | Readers of Rae ARK's novels | Anyone with a folder of novels |
+| Role | General-purpose local library + reader | Author-to-reader distribution and reader for one author's novels | General-purpose local library + reader |
 | License | GPLv3 | Proprietary, all rights reserved | GPLv3 |
 | Storage | Room + DataStore | Room + DataStore | SQLite |
 | Sync | None (by design) | Manifest + SHA-256 diff from one fixed relay | None |
 | Tests | None found | Scanner, theme, settings view-model | None |
 | Read-event stats (streak, weekly count) | No | Yes | No |
 
-ARKarium's own idea doc (`docs/arkarium/IDEA.md`) lists the planned clients as Android (ARKster's successor), Desktop ("ARKium-derived client"), possibly iOS, and an optional web companion. How ARKium relates to ARKarium is an open decision; see [`ARCHITECTURE.md`](ARCHITECTURE.md).
+ARKster and ARKium are the general readers. ARKarium is a separate app for readers of Rae ARK's novels; its README describes it as built around direct distribution from the author to the reader. ARKarium's own docs say its scanner logic (sort tiers, rescan safety, author pages) was carried over from ARKster. Its idea doc also mentions a possible desktop client derived from ARKium; that would be its own app. ARKium's scope follows from this; see [`ARCHITECTURE.md`](ARCHITECTURE.md#decision-arkium-is-a-general-purpose-reader).
 
 ## Folder conventions: Android vs ARKium
 
@@ -85,6 +86,8 @@ ARKium's reader already uses 18px as its fixed default, which matches Android's 
 
 ## ARKarium-only features
 
+These serve ARKarium's purpose (delivering one author's novels to his readers) and are **out of scope for ARKium**. They are listed for reference, and because a few ideas might translate to a general reader.
+
 - **Sync:** fetch a manifest, diff SHA-256 hashes, download only changed files, delete stale ones, then run the normal folder scan. Single fixed relay, resolved from a fiction name. Multi-relay fallback, auth and background sync are designed but not built. Known robustness issues are listed in ARKarium's `docs/arkarium/NEXT_FIXES.md`.
 - **New-chapter notifications:** a background worker that checks synced novels.
 - **Text-to-speech:** described in ARKarium's docs as the intended flagship feature, with character-aware multi-voice reading planned. Per its docs this is in progress, not finished.
@@ -92,14 +95,15 @@ ARKium's reader already uses 18px as its fixed default, which matches Android's 
 
 ## Licensing note
 
-ARKium and ARKster are GPLv3; ARKarium is proprietary. The same author owns all three, so reusing one's own code is a legal non-issue. The practical consequence is that anything ported into ARKium is published under GPLv3. Decide deliberately which ARKarium pieces (especially anything about the relay or the fiction lookup) should cross over.
+ARKium and ARKster are GPLv3; ARKarium is proprietary. The same author owns all three, so reusing one's own code is a legal non-issue. Ideas and file conventions can be adopted freely. The practical consequence for code is that anything ported from ARKarium into ARKium is published under GPLv3, so do that deliberately. ARKster is GPLv3 already, so it is the natural source for ported code.
 
 ## Suggested adoption order
 
-A proposal, not a commitment. It goes from cheapest and most correctness-critical to most strategic.
+A proposal, not a commitment. It goes from cheapest and most correctness-critical to most involved.
 
 1. **Scanner parity:** numeric arc ordering, `~` / `!` sort tiers with the legacy keyword fallback, encoding fallback. Add a small scanner test fixture (a temp folder tree plus `g_test`) so parity stays checkable.
 2. **Per-chapter read events** with the 0.9 threshold, then read/unread styling in the chapter list.
 3. **Covers and metadata files:** `cover.*`, `metadata.json`, `authors/`. Prerequisite for the Authors page and card-style Home.
 4. **Reader preferences** (already planned as v0.03).
-5. **Sync:** only after the open decision in ARCHITECTURE.md is settled.
+
+Not on the list: relay sync, new-chapter notifications and character-aware TTS. Those are ARKarium's job (see ARCHITECTURE.md).
