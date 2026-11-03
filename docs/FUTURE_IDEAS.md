@@ -17,8 +17,9 @@ to have offline.
 **Open questions to resolve when this is actually scheduled:**
 
 - **Discovery:** zero-config via mDNS/Bonjour
-  (`_arkium._tcp.local`-ish). Android: `NsdManager`. Desktop: a Node
-  extension under Neutralino. No manual IP entry.
+  (`_arkium._tcp.local`-ish). Android: `NsdManager`. Desktop: Avahi
+  (`libavahi-client`), the standard Linux mDNS stack. No manual IP
+  entry.
 - **Trust/pairing:** LAN is not automatically safe (other devices share
   the subnet). First-time pairing via PIN-on-screen or QR code, then a
   stored token/cert for automatic future syncs. No silent trust of any
@@ -37,8 +38,8 @@ to have offline.
   with the project's "runs when needed" ethos.
 - **Shared protocol:** once both apps have working basic scaffolds,
   this needs its own short spec doc (wire format / API shape) since
-  it'll be implemented independently in Kotlin (ARKster) and
-  TypeScript (ARKium) and needs to stay in sync between the two.
+  it'll be implemented independently in Kotlin (ARKster) and C
+  (ARKium) and needs to stay in sync between the two.
 
 **Status:** intentionally not started. Get "it just works" basics
 solid in both apps first.
@@ -55,9 +56,9 @@ are all unresolved.
 
 Two-tier pattern, similar in spirit to systemd socket activation /
 inetd: a near-zero-footprint listener (mDNS advertise + handshake
-ping) stays up cheaply; the real sync backend (Node extension running
-an HTTP server) only spawns on an actual sync request, then
-self-terminates after an idle timeout.
+ping) stays up cheaply; the real sync backend (a small `libsoup`
+HTTP server in-process, or a spawned helper binary) only spawns on
+an actual sync request, then self-terminates after an idle timeout.
 
 **Deliberately deferred, not decided:** whether Tier 1 needs to
 survive when the ARKium window is closed (OS-level autostart/tray

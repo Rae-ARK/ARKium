@@ -4,18 +4,19 @@
 ARKium is the desktop sibling to [ARKster](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for folders of novel `.txt`/`.md` files. Where ARKster is Android/Kotlin/Compose, ARKium targets desktop (Windows/Linux/macOS) with a lightweight, non-Electron stack.
 
 ## Stack
-- **Shell**: [Neutralino.js](https://neutralino.js.org/) — native window, filesystem, OS APIs, no bundled Chromium, small binary footprint.
-- **Frontend**: Vue 3 + TypeScript + Vite.
-- **Client bridge**: `@neutralinojs/lib` — typed bindings to the native Neutralino runtime over local WebSocket. No separate backend server for core features.
+- **Language**: C (C11).
+- **Toolkit**: [GTK 4](https://www.gtk.org/) — native window, widgets, filesystem/OS access via GLib/GIO, no bundled web runtime, no second language for the shell.
+- **Build**: a plain `Makefile` driving `cc`/`pkg-config`/`glib-compile-resources`; see [`GETTING_STARTED.md`](GETTING_STARTED.md).
+- **Resources**: static assets (CSS, icons) are compiled into the binary via `GResource` (`data/arkium.gresource.xml`), not loaded from loose files at runtime.
 
 ## Why no backend server
-Neutralino exposes filesystem, OS, and window APIs directly to frontend JS/TS via `@neutralinojs/lib`. For anything beyond that (heavier parsing, background jobs), Neutralino supports **extensions** — an optional Node.js background process the shell can spawn and talk to over WebSocket — keeping the whole stack JS/TS, no second language needed.
+GTK/GLib/GIO expose filesystem, OS, and window APIs directly in-process — no local WebSocket bridge needed, and no separate runtime to spawn. For anything genuinely heavy (large-folder scanning, background indexing), that's a `GTask`/thread-pool job inside the same process rather than a second language or an out-of-process extension.
 
 ## Relationship to ARKster
 ARKium is intended to share design language and core concepts (BookSource-style folder scanning, chapter detection heuristics, reading progress) with ARKster, adapted for desktop file-system conventions and a mouse/keyboard UI. Not a code-shared monorepo (yet) — parallel implementation, aligned UX.
 
 ## Status
-Early scaffold stage. Vue 3 + Vite frontend initialized, Neutralino client lib installed. Native shell wiring and first working window in progress.
+Early scaffold stage. GTK 4 shell initialized with a first working window and build pipeline (see [`GETTING_STARTED.md`](GETTING_STARTED.md)). Library/reader UI (see [`UI_SCREENS.md`](UI_SCREENS.md)) not yet implemented.
 
 ## Relationship to ARKster — Sibling, Not a Fork
 
@@ -44,7 +45,7 @@ Same conceptual shape as ARKster, adapted for desktop's lack of sandboxing:
 - **One root library folder**, granted via a plain OS folder picker (no SAF needed on desktop — that's an Android sandboxing requirement, not a design goal in itself).
 - Same expected structure underneath: novel subfolders → chapter files, optionally grouped into arc subfolders.
 - Files are read/indexed in place — never copied — matching ARKster's approach.
-- Chapter-detection heuristics (leading numbers, `Chapter N` prefixes, filename tokenization fallback) are reimplemented independently in TS, not shared as a library (ARKster and ARKium are separate codebases by design — see "Relationship to ARKster" above), but should behave identically so a folder that works in one works unmodified in the other.
+- Chapter-detection heuristics (leading numbers, `Chapter N` prefixes, filename tokenization fallback) are reimplemented independently in C, not shared as a library (ARKster and ARKium are separate codebases by design — see "Relationship to ARKster" above), but should behave identically so a folder that works in one works unmodified in the other.
 
 **Desktop-only affordances (not required for v1, no sandbox constraint forcing single-root):**
 - Multiple root folders (e.g. separate "Library" and "Imports" locations, or an external drive) — deferred, not blocked by anything architectural.

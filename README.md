@@ -3,11 +3,11 @@
 The desktop sibling to [**ARKster**](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for your own folder of novel `.txt`/`.md` files. No accounts, no cloud sync, no Play Store or app store dependency.
 
 ## Stack
-- [Neutralino.js](https://neutralino.js.org/) — lightweight native shell (no Electron/Chromium bundling)
-- Vue 3 + TypeScript + Vite
+- C (C11)
+- [GTK 4](https://www.gtk.org/) — native Linux toolkit, no bundled web runtime
 
 ## Status
-🚧 Early rebuild — previous SvelteKit/Capacitor attempt scrapped in favor of this stack. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for design details.
+🚧 Early rebuild — previous SvelteKit/Capacitor and Neutralino.js/Vue attempts scrapped in favor of a native GTK shell. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for design details.
 
 ## Getting started
 See [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md).

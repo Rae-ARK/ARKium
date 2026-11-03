@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=ARKium
+GenericName=Novel Reader
+Comment=Local-first, offline reading companion for your own folder of novels
+Exec=arkium
+Icon=io.github.raeark.Arkium
+Terminal=false
+Categories=Office;Literature;
