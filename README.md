@@ -1,6 +1,10 @@
-# ARKium
-
-The desktop sibling to [**ARKster**](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for your own folder of novel `.txt`/`.md` files. No accounts, no cloud sync, no Play Store or app store dependency.
+<h1 align="center"><b>ARKium</b></h1>
+<h4 align="center">The desktop sibling to [**ARKster**](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for your own folder of novel `.txt`/`.md` files. No accounts, no cloud sync, no Play Store or app store dependency.</h4>
+<h4 align="center">
+  <a href="/docs/foundational/what-is-arkium.md">What is ARKium?</a> |
+  <a href="/docs">Documentation</a> |
+  <a href="/docs/foundation">For Settled Decisions</a>
+</h4>
 
 ## The ARK ecosystem
 
@@ -29,4 +33,13 @@ See [`docs/foundation/GETTING_STARTED.md`](docs/foundation/GETTING_STARTED.md).
 Docs are organized by lifecycle stage — see [`docs/INDEX.md`](docs/INDEX.md).
 
 ## License
-See [GPLv3 LICENSE](LICENSE).
+
+[![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)
+
+ARKium is Free Software: You can use, study share and improve it at your
+will. Specifically you can redistribute and/or modify it under the terms of the
+[GNU General Public License](https://www.gnu.org/licenses/gpl.html) as
+published by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+More information can be found [here](https://github.com/Rae-ARK/ARKium/blob/main/LICENSE).
