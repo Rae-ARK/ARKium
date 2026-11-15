@@ -1,5 +1,5 @@
 <h1 align="center"><b>ARKium</b></h1>
-<h4 align="center">The desktop sibling to [**ARKster**](https://github.com/Rae-ARK/ARKster) — a local-first, offline reading companion for your own folder of novel `.txt`/`.md` files. No accounts, no cloud sync, no Play Store or app store dependency.</h4>
+<h4 align="center">The desktop sibling to ARKster — a local-first, offline reading companion for your own folder of novel `.txt`/`.md` files. No accounts, no cloud sync, no Play Store or app store dependency.</h4>
 <h4 align="center">
   <a href="/docs/foundational/what-is-arkium.md">What is ARKium?</a> |
   <a href="/docs">Documentation</a> |
